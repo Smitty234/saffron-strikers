@@ -4,1491 +4,369 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saffron Strikers Sports Club | Cricket in Czech Republic</title>
-<meta name="description" content="Saffron Strikers Sports Club - Prague-based cricket club. Forged in Courage. United in Spirit. Join us!">
+<meta name="description" content="Saffron Strikers Sports Club - Prague-based cricket club competing in CMKS T20 League Division 3. Forged in Courage. United in Spirit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ===== CSS VARIABLES ===== */
-:root {
-  --saffron: #E8621C;
-  --saffron-light: #F4842A;
-  --saffron-dark: #C84E10;
-  --navy: #1B2140;
-  --navy-light: #2A3260;
-  --white: #FFFFFF;
-  --cream: #FFF5EB;
-  --gray-100: #F7F8FA;
-  --gray-200: #E8EAF0;
-  --gray-600: #6B7280;
-  --gold: #FFB830;
-}
-
-/* ===== RESET & BASE ===== */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-body {
-  font-family: 'Barlow', sans-serif;
-  color: var(--navy);
-  background: var(--white);
-  overflow-x: hidden;
-  line-height: 1.6;
-}
-
-/* ===== UTILITY ===== */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-.section-tag {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 14px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--saffron);
-  margin-bottom: 8px;
-  display: inline-block;
-}
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
-  line-height: 1.05;
-  color: var(--navy);
-  margin-bottom: 16px;
-}
-.section-title span { color: var(--saffron); }
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 32px;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.btn-primary {
-  background: var(--saffron);
-  color: var(--white);
-  box-shadow: 0 4px 15px rgba(232,98,28,0.4);
-}
-.btn-primary:hover {
-  background: var(--saffron-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(232,98,28,0.5);
-}
-.btn-outline {
-  background: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
-}
-.btn-outline:hover {
-  background: var(--white);
-  color: var(--navy);
-}
-.btn-navy {
-  background: var(--navy);
-  color: var(--white);
-}
-.btn-navy:hover {
-  background: var(--navy-light);
-  transform: translateY(-2px);
-}
-
-/* ===== ANIMATIONS ===== */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-60px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-.animate { opacity: 0; }
-.animate.visible { animation: fadeInUp 0.7s ease forwards; }
-.animate-delay-1 { animation-delay: 0.15s !important; }
-.animate-delay-2 { animation-delay: 0.3s !important; }
-.animate-delay-3 { animation-delay: 0.45s !important; }
-.animate-delay-4 { animation-delay: 0.6s !important; }
-
-/* ===== LANGUAGE TOGGLE ===== */
-.lang-toggle {
-  display: flex;
-  gap: 4px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 20px;
-  padding: 3px;
-}
-.lang-btn {
-  padding: 4px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  background: transparent;
-  color: rgba(255,255,255,0.7);
-  transition: all 0.3s;
-}
-.lang-btn.active {
-  background: var(--saffron);
-  color: var(--white);
-}
-[data-lang="cs"] { display: none; }
-body.lang-cs [data-lang="en"] { display: none; }
-body.lang-cs [data-lang="cs"] { display: block; }
-body.lang-cs span[data-lang="cs"],
-body.lang-cs a[data-lang="cs"],
-body.lang-cs p[data-lang="cs"],
-body.lang-cs h1[data-lang="cs"],
-body.lang-cs h2[data-lang="cs"],
-body.lang-cs h3[data-lang="cs"],
-body.lang-cs li[data-lang="cs"],
-body.lang-cs div[data-lang="cs"],
-body.lang-cs td[data-lang="cs"] { display: inline; }
-body.lang-cs span[data-lang="en"],
-body.lang-cs p[data-lang="en"],
-body.lang-cs h2[data-lang="en"],
-body.lang-cs h3[data-lang="en"],
-body.lang-cs li[data-lang="en"],
-body.lang-cs div[data-lang="en"],
-body.lang-cs td[data-lang="en"] { display: none; }
-
-/* ===== NAVBAR ===== */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 12px 0;
-  background: rgba(27,33,64,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 3px solid var(--saffron);
-  transition: all 0.3s;
-}
-.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-.nav-logo img {
-  height: 50px;
-  width: auto;
-}
-.nav-logo-text {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 20px;
-  color: var(--white);
-  letter-spacing: 1px;
-  line-height: 1.1;
-}
-.nav-logo-text small {
-  display: block;
-  font-family: 'Barlow', sans-serif;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: var(--saffron);
-  font-weight: 600;
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  list-style: none;
-}
-.nav-links a {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 600;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  transition: color 0.3s;
-  position: relative;
-}
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--saffron);
-  transition: width 0.3s;
-}
-.nav-links a:hover { color: var(--saffron); }
-.nav-links a:hover::after { width: 100%; }
-.mobile-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-.mobile-toggle span {
-  width: 26px;
-  height: 3px;
-  background: var(--white);
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-/* ===== HERO ===== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: var(--navy);
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    radial-gradient(circle at 20% 50%, rgba(232,98,28,0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(232,98,28,0.1) 0%, transparent 40%),
-    radial-gradient(circle at 60% 80%, rgba(244,132,42,0.08) 0%, transparent 40%);
-}
-.hero-pattern {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image:
-    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.015) 35px, rgba(255,255,255,0.015) 36px),
-    repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(255,255,255,0.015) 35px, rgba(255,255,255,0.015) 36px);
-}
-.hero .container {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 60px;
-}
-.hero-content h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  color: var(--white);
-  line-height: 0.95;
-  margin-bottom: 8px;
-  animation: slideInLeft 0.8s ease;
-}
-.hero-content h1 .highlight {
-  color: var(--saffron);
-  display: block;
-}
-.hero-tagline {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  animation: fadeInUp 0.8s ease 0.2s both;
-}
-.hero-desc {
-  font-size: 17px;
-  color: rgba(255,255,255,0.75);
-  max-width: 480px;
-  margin-bottom: 32px;
-  animation: fadeInUp 0.8s ease 0.4s both;
-}
-.hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  animation: fadeInUp 0.8s ease 0.5s both;
-}
-.hero-visual {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeInUp 1s ease 0.3s both;
-}
-.hero-logo-wrap {
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(232,98,28,0.2) 0%, transparent 70%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  animation: float 4s ease-in-out infinite;
-}
-.hero-logo-wrap::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px dashed rgba(232,98,28,0.3);
-  animation: spin 20s linear infinite;
-}
-@keyframes spin { to { transform: rotate(360deg); } }
-.hero-logo-wrap img {
-  width: 280px;
-  height: auto;
-  filter: drop-shadow(0 10px 40px rgba(232,98,28,0.3));
-}
-.hero-scroll {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-.hero-scroll span {
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-}
-.scroll-indicator {
-  width: 24px;
-  height: 40px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-radius: 12px;
-  position: relative;
-}
-.scroll-indicator::after {
-  content: '';
-  position: absolute;
-  top: 6px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 8px;
-  background: var(--saffron);
-  border-radius: 2px;
-  animation: scrollBounce 2s ease-in-out infinite;
-}
-@keyframes scrollBounce {
-  0%, 100% { top: 6px; opacity: 1; }
-  50% { top: 22px; opacity: 0.3; }
-}
-
-/* ===== STATS BAR ===== */
-.stats-bar {
-  background: var(--saffron);
-  padding: 28px 0;
-}
-.stats-bar .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  text-align: center;
-}
-.stat-item h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2.8rem;
-  color: var(--white);
-  line-height: 1;
-}
-.stat-item p {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-}
-
-/* ===== ABOUT ===== */
-.about {
-  padding: 100px 0;
-  background: var(--white);
-}
-.about .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-.about-visual {
-  position: relative;
-}
-.about-card {
-  background: var(--navy);
-  border-radius: 12px;
-  padding: 40px;
-  color: var(--white);
-  position: relative;
-  overflow: hidden;
-}
-.about-card::before {
-  content: '';
-  position: absolute;
-  top: -50%; right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(232,98,28,0.1) 0%, transparent 50%);
-}
-.about-card h3 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8rem;
-  margin-bottom: 12px;
-  position: relative;
-  color: var(--saffron);
-}
-.about-card p {
-  position: relative;
-  color: rgba(255,255,255,0.8);
-  font-size: 15px;
-  line-height: 1.7;
-}
-.about-card .cricket-icon {
-  font-size: 4rem;
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  opacity: 0.15;
-}
-.about-text p {
-  font-size: 16px;
-  color: var(--gray-600);
-  margin-bottom: 16px;
-  line-height: 1.8;
-}
-.about-features {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 28px;
-}
-.about-feature {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 16px;
-  background: var(--cream);
-  border-radius: 8px;
-  border-left: 3px solid var(--saffron);
-}
-.about-feature .icon {
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-.about-feature h4 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--navy);
-}
-.about-feature p {
-  font-size: 13px;
-  color: var(--gray-600);
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* ===== FIXTURES ===== */
-.fixtures {
-  padding: 100px 0;
-  background: var(--navy);
-  position: relative;
-  overflow: hidden;
-}
-.fixtures::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background:
-    radial-gradient(circle at 10% 90%, rgba(232,98,28,0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 10%, rgba(232,98,28,0.06) 0%, transparent 40%);
-}
-.fixtures .section-title { color: var(--white); }
-.fixtures .section-title span { color: var(--saffron); }
-.fixtures-header {
-  text-align: center;
-  margin-bottom: 50px;
-  position: relative;
-  z-index: 1;
-}
-.fixtures-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 24px;
-  position: relative;
-  z-index: 1;
-}
-.fixture-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 28px;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-.fixture-card:hover {
-  background: rgba(255,255,255,0.08);
-  border-color: var(--saffron);
-  transform: translateY(-4px);
-}
-.fixture-card .fixture-status {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.fixture-status.upcoming {
-  background: rgba(232,98,28,0.2);
-  color: var(--saffron-light);
-}
-.fixture-status.completed {
-  background: rgba(76,175,80,0.2);
-  color: #66BB6A;
-}
-.fixture-card .teams {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-.fixture-card .team-name {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--white);
-  text-transform: uppercase;
-}
-.fixture-card .vs {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 24px;
-  color: var(--saffron);
-}
-.fixture-card .fixture-details {
-  display: flex;
-  gap: 20px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-}
-.fixture-card .fixture-details span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.fixture-card .score {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.4rem;
-  color: var(--gold);
-  text-align: center;
-  margin: 12px 0 0;
-}
-
-/* ===== TEAM ===== */
-.team {
-  padding: 100px 0;
-  background: var(--gray-100);
-}
-.team-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
-}
-.player-card {
-  background: var(--white);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.3s;
-  border: 1px solid var(--gray-200);
-}
-.player-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(27,33,64,0.12);
-  border-color: var(--saffron);
-}
-.player-avatar {
-  height: 180px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-.player-avatar::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: linear-gradient(to top, var(--white), transparent);
-}
-.player-avatar .jersey-number {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 5rem;
-  color: rgba(232,98,28,0.25);
-}
-.player-avatar .cricket-emoji {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 1.2rem;
-}
-.player-info {
-  padding: 20px;
-  text-align: center;
-}
-.player-info h4 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  text-transform: uppercase;
-  color: var(--navy);
-  margin-bottom: 4px;
-}
-.player-info .role {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--saffron);
-}
-.player-info .origin {
-  font-size: 12px;
-  color: var(--gray-600);
-  margin-top: 4px;
-}
-
-/* ===== GALLERY ===== */
-.gallery {
-  padding: 100px 0;
-  background: var(--white);
-}
-.gallery-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 250px;
-  gap: 16px;
-}
-.gallery-item {
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  background: var(--navy);
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-.gallery-item:hover { transform: scale(1.02); }
-.gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-.gallery-item .gallery-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, var(--saffron-dark) 100%);
-  color: rgba(255,255,255,0.6);
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  gap: 8px;
-}
-.gallery-placeholder .emoji { font-size: 2.5rem; opacity: 0.5; }
-
-/* ===== JOIN ===== */
-.join {
-  padding: 100px 0;
-  background: linear-gradient(135deg, var(--saffron) 0%, var(--saffron-dark) 100%);
-  position: relative;
-  overflow: hidden;
-}
-.join::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image:
-    repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(255,255,255,0.04) 30px, rgba(255,255,255,0.04) 31px);
-}
-.join .container {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-.join .section-tag { color: var(--navy); }
-.join .section-title { color: var(--white); }
-.join .section-title span { color: var(--navy); }
-.join-desc {
-  font-size: 18px;
-  color: rgba(255,255,255,0.9);
-  max-width: 600px;
-  margin: 0 auto 36px;
-}
-.join-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: grid;
-  gap: 16px;
-}
-.join-form input,
-.join-form select,
-.join-form textarea {
-  width: 100%;
-  padding: 14px 18px;
-  border: 2px solid rgba(255,255,255,0.3);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.15);
-  color: var(--white);
-  font-family: 'Barlow', sans-serif;
-  font-size: 15px;
-  transition: border-color 0.3s;
-  backdrop-filter: blur(4px);
-}
-.join-form input::placeholder,
-.join-form textarea::placeholder {
-  color: rgba(255,255,255,0.6);
-}
-.join-form input:focus,
-.join-form select:focus,
-.join-form textarea:focus {
-  outline: none;
-  border-color: var(--white);
-  background: rgba(255,255,255,0.2);
-}
-.join-form select {
-  appearance: none;
-  cursor: pointer;
-}
-.join-form select option {
-  background: var(--navy);
-  color: var(--white);
-}
-.join-form textarea { resize: vertical; min-height: 80px; }
-
-/* ===== CONTACT ===== */
-.contact {
-  padding: 100px 0;
-  background: var(--navy);
-  position: relative;
-}
-.contact .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-}
-.contact .section-title { color: var(--white); }
-.contact .section-title span { color: var(--saffron); }
-.contact-info-list {
-  list-style: none;
-  display: grid;
-  gap: 24px;
-  margin-top: 30px;
-}
-.contact-info-item {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-.contact-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  background: rgba(232,98,28,0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  flex-shrink: 0;
-}
-.contact-info-item h4 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--saffron);
-  margin-bottom: 4px;
-}
-.contact-info-item p {
-  font-size: 15px;
-  color: rgba(255,255,255,0.7);
-}
-.contact-info-item a {
-  color: rgba(255,255,255,0.7);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.contact-info-item a:hover { color: var(--saffron); }
-.contact-form {
-  display: grid;
-  gap: 16px;
-}
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px 18px;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.05);
-  color: var(--white);
-  font-family: 'Barlow', sans-serif;
-  font-size: 15px;
-  transition: all 0.3s;
-}
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: rgba(255,255,255,0.35);
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--saffron);
-  background: rgba(255,255,255,0.08);
-}
-.contact-form textarea { resize: vertical; min-height: 120px; }
-.social-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 30px;
-}
-.social-link {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-.social-link:hover {
-  background: var(--saffron);
-  border-color: var(--saffron);
-  transform: translateY(-3px);
-}
-
-/* ===== SPONSORS ===== */
-.sponsors {
-  padding: 60px 0;
-  background: var(--gray-100);
-  text-align: center;
-}
-.sponsors .section-tag { margin-bottom: 30px; }
-.sponsors-grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-.sponsor-item {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-weight: 700;
-  font-size: 1.6rem;
-  color: var(--gray-600);
-  opacity: 0.6;
-  transition: opacity 0.3s;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.sponsor-item:hover { opacity: 1; }
-
-/* ===== FOOTER ===== */
-.footer {
-  background: #0F1328;
-  padding: 40px 0 20px;
-  border-top: 3px solid var(--saffron);
-}
-.footer .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.footer-brand img { height: 40px; }
-.footer-brand span {
-  font-family: 'Bebas Neue', sans-serif;
-  color: var(--white);
-  font-size: 18px;
-}
-.footer-text {
-  font-size: 13px;
-  color: rgba(255,255,255,0.4);
-}
-.footer-links {
-  display: flex;
-  gap: 24px;
-  list-style: none;
-}
-.footer-links a {
-  font-size: 13px;
-  color: rgba(255,255,255,0.5);
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer-links a:hover { color: var(--saffron); }
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 968px) {
-  .hero .container { grid-template-columns: 1fr; text-align: center; padding-top: 120px; }
-  .hero-desc { margin: 0 auto 32px; }
-  .hero-buttons { justify-content: center; }
-  .hero-visual { order: -1; }
-  .hero-logo-wrap { width: 250px; height: 250px; }
-  .hero-logo-wrap img { width: 180px; }
-  .about .container { grid-template-columns: 1fr; }
-  .contact .container { grid-template-columns: 1fr; }
-  .stats-bar .container { grid-template-columns: repeat(2, 1fr); }
-  .nav-links { display: none; }
-  .mobile-toggle { display: flex; }
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--navy);
-    padding: 20px;
-    border-bottom: 3px solid var(--saffron);
-    gap: 16px;
-  }
-  .gallery-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 200px;
-  }
-  .gallery-item:nth-child(1) { grid-column: span 2; }
-}
-@media (max-width: 600px) {
-  .stats-bar .container { grid-template-columns: repeat(2, 1fr); }
-  .about-features { grid-template-columns: 1fr; }
-  .fixtures-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 200px; }
-  .gallery-item:nth-child(1) { grid-column: span 1; grid-row: span 1; }
-  .footer .container { flex-direction: column; text-align: center; }
+:root{--sf:#E8621C;--sf2:#FF7A2F;--sf3:#C84E10;--nv:#0A0E1A;--nv2:#141829;--nv3:#1E2340;--wh:#FFF;--gd:#FFB830;--g4:#8B8FA8;--g6:#5A5E78;--gn:#00C853}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Poppins',sans-serif;color:var(--wh);background:var(--nv);overflow-x:hidden;line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+[data-lang="cs"]{display:none}body.cs [data-lang="en"]{display:none!important}body.cs [data-lang="cs"]{display:inline!important}
+body.cs div[data-lang="cs"],body.cs p[data-lang="cs"],body.cs h1[data-lang="cs"],body.cs h2[data-lang="cs"],body.cs h3[data-lang="cs"],body.cs span[data-lang="cs"]{display:inline!important}
+body.cs div[data-lang="en"],body.cs p[data-lang="en"],body.cs h1[data-lang="en"],body.cs h2[data-lang="en"],body.cs h3[data-lang="en"],body.cs span[data-lang="en"]{display:none!important}
+.label{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--sf)}
+.heading-lg{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,4vw,3.2rem);text-transform:uppercase;line-height:1;letter-spacing:-0.5px}
+.heading-lg span{color:var(--sf)}
+.accent-bar{width:50px;height:3px;background:var(--sf);margin-bottom:16px}
+.sub{font-size:15px;color:var(--g4);max-width:500px;margin-top:12px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 36px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .4s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 100%,12px 100%)}
+.btn-sf{background:var(--sf);color:var(--wh)}.btn-sf:hover{background:var(--sf2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,98,28,.4)}
+.btn-ol{background:transparent;color:var(--wh);border:2px solid rgba(255,255,255,.4);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 100%,12px 100%)}.btn-ol:hover{border-color:var(--sf);color:var(--sf)}
+.btn-dk{background:var(--nv);color:var(--wh)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideR{from{opacity:0;transform:translateX(-80px)}to{opacity:1;transform:translateX(0)}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(232,98,28,.2)}50%{box-shadow:0 0 40px rgba(232,98,28,.4)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+.anim{opacity:0}.anim.show{animation:fadeUp .6s ease forwards}
+.d1{animation-delay:.1s!important}.d2{animation-delay:.2s!important}.d3{animation-delay:.3s!important}.d4{animation-delay:.4s!important}.d5{animation-delay:.5s!important}
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,14,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(232,98,28,.2);transition:all .3s}
+.nav.scrolled{background:rgba(10,14,26,.98);border-bottom-color:var(--sf)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.nav-brand img{height:48px}
+.nav-brand-text{font-family:'Oswald',sans-serif;font-weight:700;font-size:18px;color:var(--wh);text-transform:uppercase;letter-spacing:1px;line-height:1.1}
+.nav-brand-text small{display:block;font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:3px;color:var(--sf);font-weight:600}
+.nav-menu{display:flex;align-items:center;gap:6px;list-style:none}
+.nav-menu a{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.7);text-decoration:none;padding:8px 14px;transition:color .3s}
+.nav-menu a:hover,.nav-menu a.active{color:var(--sf)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.lang-sw{display:flex;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden}
+.lang-sw button{padding:6px 14px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;background:transparent;border:none;color:rgba(255,255,255,.5);cursor:pointer;transition:all .3s}
+.lang-sw button.on{background:var(--sf);color:var(--wh)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.burger span{width:24px;height:2px;background:var(--wh);transition:all .3s}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--nv)}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--nv) 0%,var(--nv2) 40%,rgba(232,98,28,.08) 100%),radial-gradient(ellipse at 80% 50%,rgba(232,98,28,.12) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(232,98,28,.06) 0%,transparent 50%)}
+.hero-diag{position:absolute;bottom:0;left:0;right:0;height:120px;background:var(--nv);clip-path:polygon(0 60%,100% 0,100% 100%,0 100%);z-index:2}
+.hero .container{position:relative;z-index:3;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:100px;padding-bottom:140px}
+.hero-content{animation:slideR .8s ease}
+.hero-label{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:14px;letter-spacing:5px;text-transform:uppercase;color:var(--sf);margin-bottom:12px;display:flex;align-items:center;gap:12px}
+.hero-label::before{content:'';width:40px;height:2px;background:var(--sf)}
+.hero h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(3.5rem,7vw,6rem);text-transform:uppercase;line-height:.9;letter-spacing:-2px;margin-bottom:6px}
+.hero h1 .ac{color:var(--sf);display:block}
+.hero-tag{font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(1rem,2vw,1.3rem);color:var(--gd);letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fadeUp .6s ease .3s forwards}
+.hero-desc{font-size:15px;color:rgba(255,255,255,.6);max-width:460px;margin-bottom:36px;line-height:1.7;opacity:0;animation:fadeUp .6s ease .5s forwards}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp .6s ease .6s forwards}
+.hero-vis{display:flex;justify-content:center;align-items:center;opacity:0;animation:fadeUp .8s ease .4s forwards}
+.logo-wrap{width:360px;height:360px;position:relative;display:flex;align-items:center;justify-content:center}
+.logo-ring{position:absolute;width:100%;height:100%;border-radius:50%;border:1px solid rgba(232,98,28,.15);animation:float 5s ease-in-out infinite}
+.logo-ring:nth-child(2){width:85%;height:85%;top:7.5%;left:7.5%;border-color:rgba(232,98,28,.1);animation-delay:-1.5s}
+.logo-glow{position:absolute;width:60%;height:60%;border-radius:50%;top:20%;left:20%;background:radial-gradient(circle,rgba(232,98,28,.15) 0%,transparent 70%);filter:blur(30px);animation:glow 3s ease-in-out infinite}
+.logo-wrap img{width:240px;position:relative;z-index:2;filter:drop-shadow(0 10px 50px rgba(232,98,28,.3))}
+/* TICKER */
+.ticker{background:var(--sf);padding:14px 0;position:relative;z-index:4;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-flex;animation:tickerScroll 30s linear infinite}
+.ticker-item{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--wh);padding:0 40px;display:flex;align-items:center;gap:10px}
+.ticker-item .dot{width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%}
+@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+/* SECTIONS */
+.section{padding:100px 0;position:relative}
+.sh{margin-bottom:50px}.sh.c{text-align:center}
+.sh.c .accent-bar{margin:0 auto 16px}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-card{background:linear-gradient(135deg,var(--nv2),var(--nv3));border:1px solid rgba(232,98,28,.15);padding:40px;position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px))}
+.about-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--sf)}
+.about-card h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.6rem;text-transform:uppercase;color:var(--sf);margin-bottom:16px}
+.about-card p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.8}
+.about-card .bg-ico{position:absolute;bottom:-10px;right:10px;font-size:5rem;opacity:.06}
+.af-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.af{background:rgba(232,98,28,.06);border:1px solid rgba(232,98,28,.1);padding:20px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
+.af .ico{font-size:1.4rem;margin-bottom:10px;display:block}
+.af h4{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--wh);margin-bottom:4px}
+.af p{font-size:12px;color:var(--g4);line-height:1.5}
+/* FIXTURES */
+.fc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:24px 28px;margin-bottom:12px;display:grid;grid-template-columns:100px 1fr 140px;align-items:center;gap:24px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px))}
+.fc:hover{background:rgba(232,98,28,.06);border-color:rgba(232,98,28,.2);transform:translateX(4px)}
+.fd{text-align:center}.fd .dy{font-family:'Oswald',sans-serif;font-weight:700;font-size:2rem;color:var(--sf);line-height:1}
+.fd .mo{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--g4)}
+.fm{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.ft{font-family:'Oswald',sans-serif;font-weight:600;font-size:16px;text-transform:uppercase;color:var(--wh)}
+.ft.hm{color:var(--sf)}
+.fv{font-family:'Oswald',sans-serif;font-weight:700;font-size:14px;color:var(--g4);background:rgba(255,255,255,.05);padding:4px 12px;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 100%,6px 100%)}
+.fmeta{text-align:right;font-size:12px;color:var(--g4)}
+.fmeta .time{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;color:var(--wh)}
+.fb{display:inline-block;padding:3px 10px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;background:rgba(0,200,83,.15);color:var(--gn);clip-path:polygon(0 0,calc(100% - 5px) 0,100% 100%,5px 100%);margin-top:4px}
+/* TRAINING TABS */
+.tabs{display:flex;gap:4px;margin-bottom:30px;justify-content:center;flex-wrap:wrap}
+.tb{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);cursor:pointer;transition:all .3s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 100%,8px 100%)}
+.tb.on{background:var(--sf);border-color:var(--sf);color:var(--wh)}
+.tp{display:none}.tp.on{display:block}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.tc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:20px 24px;display:flex;align-items:center;gap:18px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
+.tc:hover{background:rgba(232,98,28,.06);border-color:rgba(232,98,28,.15)}
+.td{text-align:center;flex-shrink:0;width:56px}
+.td .d{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.6rem;color:var(--sf);line-height:1}
+.td .m{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--g4)}
+.ti h4{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;color:var(--wh)}
+.ti p{font-size:12px;color:var(--g4)}
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
+.pl{background:linear-gradient(180deg,var(--nv3) 0%,var(--nv2) 100%);border:1px solid rgba(255,255,255,.06);overflow:hidden;transition:all .4s;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
+.pl:hover{border-color:var(--sf);transform:translateY(-6px);box-shadow:0 12px 40px rgba(232,98,28,.15)}
+.pl-top{height:160px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--nv2),rgba(232,98,28,.08));display:flex;align-items:center;justify-content:center}
+.pl-top .num{font-family:'Oswald',sans-serif;font-weight:700;font-size:5rem;color:rgba(232,98,28,.12)}
+.pl-top .bdg{position:absolute;top:12px;right:12px;font-size:1.1rem}
+.pl-bot{padding:18px 20px;text-align:center;border-top:2px solid rgba(232,98,28,.2)}
+.pl-bot h4{font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;text-transform:uppercase;color:var(--wh);margin-bottom:2px}
+.pl-bot .pos{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--sf)}
+.pl.rec .pl-top{background:linear-gradient(135deg,var(--sf3),var(--sf))}.pl.rec .pl-top .num{color:rgba(255,255,255,.15)}
+/* GALLERY */
+.gg{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:12px}
+.gi{overflow:hidden;position:relative;cursor:pointer;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:transform .3s}
+.gi:hover{transform:scale(1.02)}.gi:first-child{grid-column:span 2;grid-row:span 2}
+.gph{width:100%;height:100%;background:linear-gradient(135deg,var(--nv2),var(--nv3),rgba(232,98,28,.1));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.gph .em{font-size:2rem;opacity:.4}
+.gph span{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4)}
+/* JOIN */
+.join-s{background:linear-gradient(135deg,var(--sf) 0%,var(--sf3) 100%);position:relative;overflow:hidden}
+.join-s::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 25px,rgba(255,255,255,.03) 25px,rgba(255,255,255,.03) 26px)}
+.join-s .container{position:relative;z-index:1}
+.jg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.jf{display:grid;gap:14px}
+.jf input,.jf select,.jf textarea{width:100%;padding:14px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:var(--wh);font-family:'Poppins',sans-serif;font-size:14px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.jf input::placeholder,.jf textarea::placeholder{color:rgba(255,255,255,.5)}
+.jf input:focus,.jf select:focus,.jf textarea:focus{outline:none;border-color:var(--wh);background:rgba(255,255,255,.18)}
+.jf select{appearance:none;cursor:pointer}.jf select option{background:var(--nv);color:var(--wh)}
+.jf textarea{resize:vertical;min-height:80px}
+/* CONTACT */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.cl{list-style:none;display:grid;gap:28px;margin-top:24px}
+.ci{display:flex;gap:16px;align-items:flex-start}
+.cico{width:50px;height:50px;background:rgba(232,98,28,.1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.ci h4{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--sf);margin-bottom:2px}
+.ci p,.ci a{font-size:14px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .3s}
+.ci a:hover{color:var(--sf)}
+.sr{display:flex;gap:10px;margin-top:30px}
+.sl{width:44px;height:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:1.1rem;text-decoration:none;transition:all .3s;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px))}
+.sl:hover{background:var(--sf);border-color:var(--sf);transform:translateY(-3px)}
+.cf{display:grid;gap:14px}
+.cf input,.cf textarea{width:100%;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--wh);font-family:'Poppins',sans-serif;font-size:14px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
+.cf input::placeholder,.cf textarea::placeholder{color:rgba(255,255,255,.3)}
+.cf input:focus,.cf textarea:focus{outline:none;border-color:var(--sf);background:rgba(255,255,255,.06)}
+.cf textarea{resize:vertical;min-height:120px}
+/* SPONSORS */
+.spb{padding:50px 0;background:var(--nv2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
+.spf{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap}
+.sp{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.4rem;color:var(--g4);letter-spacing:2px;text-transform:uppercase;opacity:.5;transition:all .3s}
+.sp:hover{opacity:1;color:var(--sf)}
+/* FOOTER */
+.footer{background:#060812;padding:30px 0 20px;border-top:2px solid var(--sf)}
+.footer .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.fb2{display:flex;align-items:center;gap:10px}
+.fb2 img{height:36px}.fb2 span{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--wh);text-transform:uppercase}
+.fc2{font-size:12px;color:var(--g6)}
+.fn{display:flex;gap:20px;list-style:none}
+.fn a{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--g4);text-decoration:none;transition:color .3s}
+.fn a:hover{color:var(--sf)}
+@media(max-width:1024px){
+.hero .container{grid-template-columns:1fr;text-align:center;padding-top:120px}
+.hero-label{justify-content:center}.hero-desc{margin:0 auto 36px}.hero-actions{justify-content:center}
+.hero-vis{order:-1}.logo-wrap{width:260px;height:260px}.logo-wrap img{width:180px}
+.about-grid,.jg,.cg{grid-template-columns:1fr}
+.nav-menu{display:none}.burger{display:flex}
+.nav-menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--nv);padding:20px;border-bottom:2px solid var(--sf);gap:8px}
+.fc{grid-template-columns:80px 1fr;gap:16px}.fmeta{grid-column:1/-1;text-align:left}
+}
+@media(max-width:640px){
+.af-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:repeat(2,1fr)}
+.gg{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gi:first-child{grid-column:span 2}
+.tg{grid-template-columns:1fr}.footer .container{flex-direction:column;text-align:center}
+.fc{grid-template-columns:1fr}.fd{text-align:left}.fm{flex-wrap:wrap}
 }
 </style>
 </head>
 <body>
-
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar">
-  <div class="container">
-    <a href="#home" class="nav-logo">
-      <img src="SSSC_logo.jpeg" alt="Saffron Strikers Logo">
-      <div class="nav-logo-text">
-        Saffron Strikers
-        <small>Sports Club</small>
-      </div>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home"><span data-lang="en">Home</span><span data-lang="cs">Domů</span></a></li>
-      <li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>
-      <li><a href="#fixtures"><span data-lang="en">Fixtures</span><span data-lang="cs">Zápasy</span></a></li>
-      <li><a href="#team"><span data-lang="en">Team</span><span data-lang="cs">Tým</span></a></li>
-      <li><a href="#gallery"><span data-lang="en">Gallery</span><span data-lang="cs">Galerie</span></a></li>
-      <li><a href="#join" class="btn btn-primary" style="padding:10px 22px;font-size:13px;"><span data-lang="en">Join Us</span><span data-lang="cs">Přidej se</span></a></li>
-      <li>
-        <div class="lang-toggle">
-          <button class="lang-btn active" onclick="setLang('en')">EN</button>
-          <button class="lang-btn" onclick="setLang('cs')">CZ</button>
-        </div>
-      </li>
-    </ul>
-    <button class="mobile-toggle" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="home">
-  <div class="hero-pattern"></div>
-  <div class="container">
-    <div class="hero-content">
-      <h1 data-lang="en">
-        <span class="highlight">Saffron</span>
-        Strikers
-      </h1>
-      <h1 data-lang="cs" style="display:none;">
-        <span class="highlight">Saffron</span>
-        Strikers
-      </h1>
-      <p class="hero-tagline">Forged in Courage. United in Spirit.</p>
-      <p class="hero-desc" data-lang="en">Prague's boldest cricket club — promoting the sport, cultural exchange, and community spirit across the Czech Republic since 2025.</p>
-      <p class="hero-desc" data-lang="cs" style="display:none;">Nejodvážnější kriketový klub v Praze — podporujeme sport, kulturní výměnu a komunitního ducha po celé České republice od roku 2025.</p>
-      <div class="hero-buttons">
-        <a href="#join" class="btn btn-primary"><span data-lang="en">Join the Club</span><span data-lang="cs">Vstup do klubu</span> &#9889;</a>
-        <a href="#about" class="btn btn-outline"><span data-lang="en">Our Story</span><span data-lang="cs">Náš příběh</span></a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-logo-wrap">
-        <img src="SSSC_logo.jpeg" alt="Saffron Strikers Logo">
-      </div>
-    </div>
-  </div>
-  <a href="#about" class="hero-scroll">
-    <span>Scroll</span>
-    <div class="scroll-indicator"></div>
-  </a>
-</section>
-
-<!-- ===== STATS BAR ===== -->
-<div class="stats-bar">
-  <div class="container">
-    <div class="stat-item animate">
-      <h3>2025</h3>
-      <p data-lang="en">Founded</p><p data-lang="cs" style="display:none;">Založen</p>
-    </div>
-    <div class="stat-item animate animate-delay-1">
-      <h3>Prague</h3>
-      <p data-lang="en">Based in</p><p data-lang="cs" style="display:none;">Sídlo</p>
-    </div>
-    <div class="stat-item animate animate-delay-2">
-      <h3>🏏</h3>
-      <p data-lang="en">Cricket Club</p><p data-lang="cs" style="display:none;">Kriketový klub</p>
-    </div>
-    <div class="stat-item animate animate-delay-3">
-      <h3>ICC</h3>
-      <p data-lang="en">Affiliated</p><p data-lang="cs" style="display:none;">Přidružen</p>
-    </div>
-  </div>
+<nav class="nav" id="mainNav"><div class="container">
+<a href="#home" class="nav-brand"><img src="SSSC_logo.jpeg" alt="Saffron Strikers"><div class="nav-brand-text">Saffron Strikers<small>Sports Club, z.s.</small></div></a>
+<ul class="nav-menu" id="navMenu">
+<li><a href="#home"><span data-lang="en">Home</span><span data-lang="cs">Domů</span></a></li>
+<li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>
+<li><a href="#fixtures"><span data-lang="en">Fixtures</span><span data-lang="cs">Zápasy</span></a></li>
+<li><a href="#training"><span data-lang="en">Training</span><span data-lang="cs">Tréninky</span></a></li>
+<li><a href="#team"><span data-lang="en">Squad</span><span data-lang="cs">Tým</span></a></li>
+<li><a href="#gallery"><span data-lang="en">Gallery</span><span data-lang="cs">Galerie</span></a></li>
+<li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="cs">Kontakt</span></a></li>
+</ul>
+<div class="nav-cta">
+<div class="lang-sw"><button class="on" onclick="setLang('en')">EN</button><button onclick="setLang('cs')">CZ</button></div>
+<a href="#join" class="btn btn-sf" style="padding:10px 24px;font-size:12px"><span data-lang="en">Join Us</span><span data-lang="cs">Přidej se</span></a>
 </div>
+<button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')"><span></span><span></span><span></span></button>
+</div></nav>
 
-<!-- ===== ABOUT ===== -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about-visual animate">
-      <div class="about-card">
-        <h3 data-lang="en">Our Mission</h3>
-        <h3 data-lang="cs" style="display:none;">Naše mise</h3>
-        <p data-lang="en">Saffron Strikers Sports Club is a voluntary cricket club founded to bring together people through playing, promoting, and developing cricket in the Czech Republic. We promote healthy lifestyles, cultural exchange, and community cohesion.</p>
-        <p data-lang="cs" style="display:none;">Saffron Strikers Sports Club je dobrovolný kriketový spolek založený za účelem spojování lidí prostřednictvím hraní, propagace a rozvoje kriketu v České republice. Podporujeme zdravý životní styl, kulturní výměnu a komunitní soudržnost.</p>
-        <span class="cricket-icon">🏏</span>
-      </div>
-    </div>
-    <div class="about-text">
-      <span class="section-tag"><span data-lang="en">About Us</span><span data-lang="cs">O nás</span></span>
-      <h2 class="section-title" data-lang="en">More Than <span>Cricket</span></h2>
-      <h2 class="section-title" data-lang="cs" style="display:none;">Víc než <span>kriket</span></h2>
-      <p class="animate" data-lang="en">Founded on December 14, 2025, in Prague, Saffron Strikers Sports Club (z.s.) was born from a shared passion for cricket and community. We're a registered non-profit association bringing cricket culture to the heart of Central Europe.</p>
-      <p class="animate" data-lang="cs" style="display:none;">Saffron Strikers Sports Club (z.s.) byl založen 14. prosince 2025 v Praze ze sdílené vášně pro kriket a komunitu. Jsme registrovaný neziskový spolek přinášející kriketovou kulturu do srdce střední Evropy.</p>
-      <p class="animate animate-delay-1" data-lang="en">We organize cricket training, matches, and competitions, participate in international tournaments under ICC/ECC, and host cultural and community events that strengthen bonds across borders.</p>
-      <p class="animate animate-delay-1" data-lang="cs" style="display:none;">Organizujeme kriketové tréninky, zápasy a soutěže, účastníme se mezinárodních turnajů pod ICC/ECC a pořádáme kulturní a komunitní akce, které posilují vazby přes hranice.</p>
-      <div class="about-features">
-        <div class="about-feature animate animate-delay-2">
-          <span class="icon">🏟️</span>
-          <div>
-            <h4 data-lang="en">Training & Matches</h4><h4 data-lang="cs" style="display:none;">Tréninky a zápasy</h4>
-            <p data-lang="en">Regular training sessions and competitive matches</p><p data-lang="cs" style="display:none;">Pravidelné tréninky a soutěžní zápasy</p>
-          </div>
-        </div>
-        <div class="about-feature animate animate-delay-3">
-          <span class="icon">🌍</span>
-          <div>
-            <h4 data-lang="en">International Play</h4><h4 data-lang="cs" style="display:none;">Mezinárodní zápasy</h4>
-            <p data-lang="en">ICC & ECC tournament participation</p><p data-lang="cs" style="display:none;">Účast na turnajích ICC a ECC</p>
-          </div>
-        </div>
-        <div class="about-feature animate animate-delay-2">
-          <span class="icon">🤝</span>
-          <div>
-            <h4 data-lang="en">Community</h4><h4 data-lang="cs" style="display:none;">Komunita</h4>
-            <p data-lang="en">Cultural exchange & social inclusion</p><p data-lang="cs" style="display:none;">Kulturní výměna a sociální začleňování</p>
-          </div>
-        </div>
-        <div class="about-feature animate animate-delay-3">
-          <span class="icon">🎓</span>
-          <div>
-            <h4 data-lang="en">Development</h4><h4 data-lang="cs" style="display:none;">Rozvoj</h4>
-            <p data-lang="en">Coaching at all age levels</p><p data-lang="cs" style="display:none;">Koučování pro všechny věkové kategorie</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FIXTURES ===== -->
-<section class="fixtures" id="fixtures">
-  <div class="fixtures-header">
-    <span class="section-tag"><span data-lang="en">Season 2026</span><span data-lang="cs">Sezóna 2026</span></span>
-    <h2 class="section-title"><span data-lang="en">Fixtures & <span>Results</span></span><span data-lang="cs">Zápasy a <span>výsledky</span></span></h2>
-  </div>
-  <div class="container">
-    <div class="fixtures-grid">
-      <div class="fixture-card animate">
-        <span class="fixture-status upcoming" data-lang="en">Upcoming</span>
-        <span class="fixture-status upcoming" data-lang="cs" style="display:none;">Nadcházející</span>
-        <div class="teams">
-          <span class="team-name">Saffron Strikers</span>
-          <span class="vs">VS</span>
-          <span class="team-name">TBD</span>
-        </div>
-        <div class="fixture-details">
-          <span>📅 <span data-lang="en">Season 2026</span><span data-lang="cs">Sezóna 2026</span></span>
-          <span>📍 Prague</span>
-        </div>
-      </div>
-      <div class="fixture-card animate animate-delay-1">
-        <span class="fixture-status upcoming" data-lang="en">Upcoming</span>
-        <span class="fixture-status upcoming" data-lang="cs" style="display:none;">Nadcházející</span>
-        <div class="teams">
-          <span class="team-name">Saffron Strikers</span>
-          <span class="vs">VS</span>
-          <span class="team-name">TBD</span>
-        </div>
-        <div class="fixture-details">
-          <span>📅 <span data-lang="en">Season 2026</span><span data-lang="cs">Sezóna 2026</span></span>
-          <span>📍 Czech Republic</span>
-        </div>
-      </div>
-      <div class="fixture-card animate animate-delay-2">
-        <span class="fixture-status upcoming" data-lang="en">Friendly Match</span>
-        <span class="fixture-status upcoming" data-lang="cs" style="display:none;">Přátelský zápas</span>
-        <div class="teams">
-          <span class="team-name">Saffron Strikers</span>
-          <span class="vs">VS</span>
-          <span class="team-name">TBD</span>
-        </div>
-        <div class="fixture-details">
-          <span>📅 <span data-lang="en">Coming Soon</span><span data-lang="cs">Brzy</span></span>
-          <span>📍 TBD</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== TEAM ===== -->
-<section class="team" id="team">
-  <div class="container">
-    <div class="team-header">
-      <span class="section-tag"><span data-lang="en">The Squad</span><span data-lang="cs">Sestava</span></span>
-      <h2 class="section-title"><span data-lang="en">Meet the <span>Team</span></span><span data-lang="cs">Náš <span>tým</span></span></h2>
-    </div>
-    <div class="team-grid">
-      <div class="player-card animate">
-        <div class="player-avatar">
-          <span class="jersey-number">01</span>
-          <span class="cricket-emoji">🏏</span>
-        </div>
-        <div class="player-info">
-          <h4>Parth Bhalodiya</h4>
-          <span class="role" data-lang="en">Founder / Player</span><span class="role" data-lang="cs" style="display:none;">Zakladatel / Hráč</span>
-        </div>
-      </div>
-      <div class="player-card animate animate-delay-1">
-        <div class="player-avatar">
-          <span class="jersey-number">02</span>
-          <span class="cricket-emoji">🏏</span>
-        </div>
-        <div class="player-info">
-          <h4>Smit Patel</h4>
-          <span class="role" data-lang="en">Founder / Player</span><span class="role" data-lang="cs" style="display:none;">Zakladatel / Hráč</span>
-        </div>
-      </div>
-      <div class="player-card animate animate-delay-2">
-        <div class="player-avatar">
-          <span class="jersey-number">03</span>
-          <span class="cricket-emoji">🏏</span>
-        </div>
-        <div class="player-info">
-          <h4>Neel Pandya</h4>
-          <span class="role" data-lang="en">Founder / Player</span><span class="role" data-lang="cs" style="display:none;">Zakladatel / Hráč</span>
-        </div>
-      </div>
-      <div class="player-card animate animate-delay-3">
-        <div class="player-avatar">
-          <span class="jersey-number">04</span>
-          <span class="cricket-emoji">🏏</span>
-        </div>
-        <div class="player-info">
-          <h4>Harsh Jadawala</h4>
-          <span class="role" data-lang="en">Founder / Player</span><span class="role" data-lang="cs" style="display:none;">Zakladatel / Hráč</span>
-        </div>
-      </div>
-      <div class="player-card animate animate-delay-4">
-        <div class="player-avatar" style="background: linear-gradient(135deg, var(--saffron-dark), var(--saffron));">
-          <span class="jersey-number" style="color:rgba(255,255,255,0.2);">+</span>
-        </div>
-        <div class="player-info">
-          <h4 data-lang="en">Join the Squad</h4><h4 data-lang="cs" style="display:none;">Přidej se</h4>
-          <span class="role" data-lang="en">We're Recruiting!</span><span class="role" data-lang="cs" style="display:none;">Nabíráme!</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== GALLERY ===== -->
-<section class="gallery" id="gallery">
-  <div class="container">
-    <div class="gallery-header">
-      <span class="section-tag"><span data-lang="en">Moments</span><span data-lang="cs">Momenty</span></span>
-      <h2 class="section-title"><span data-lang="en">Photo <span>Gallery</span></span><span data-lang="cs">Foto <span>galerie</span></span></h2>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item animate">
-        <div class="gallery-placeholder">
-          <span class="emoji">🏏</span>
-          <span data-lang="en">Match Day Photos</span><span data-lang="cs">Fotky ze zápasů</span>
-        </div>
-      </div>
-      <div class="gallery-item animate animate-delay-1">
-        <div class="gallery-placeholder">
-          <span class="emoji">🏟️</span>
-          <span data-lang="en">Training Sessions</span><span data-lang="cs">Tréninky</span>
-        </div>
-      </div>
-      <div class="gallery-item animate animate-delay-2">
-        <div class="gallery-placeholder">
-          <span class="emoji">🏆</span>
-          <span data-lang="en">Tournaments</span><span data-lang="cs">Turnaje</span>
-        </div>
-      </div>
-      <div class="gallery-item animate animate-delay-3">
-        <div class="gallery-placeholder">
-          <span class="emoji">🤝</span>
-          <span data-lang="en">Community Events</span><span data-lang="cs">Komunitní akce</span>
-        </div>
-      </div>
-      <div class="gallery-item animate animate-delay-4">
-        <div class="gallery-placeholder">
-          <span class="emoji">🎉</span>
-          <span data-lang="en">Club Life</span><span data-lang="cs">Klubový život</span>
-        </div>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:24px;color:var(--gray-600);font-size:14px;" data-lang="en">📸 Photos coming soon — follow us on social media for updates!</p>
-    <p style="text-align:center;margin-top:24px;color:var(--gray-600);font-size:14px;display:none;" data-lang="cs">📸 Fotky již brzy — sledujte nás na sociálních sítích!</p>
-  </div>
-</section>
-
-<!-- ===== JOIN ===== -->
-<section class="join" id="join">
-  <div class="container">
-    <span class="section-tag"><span data-lang="en">Become a Striker</span><span data-lang="cs">Staň se Strikerem</span></span>
-    <h2 class="section-title"><span data-lang="en">Join <span>Our Team</span></span><span data-lang="cs">Přidej se k <span>nám</span></span></h2>
-    <p class="join-desc" data-lang="en">Whether you're an experienced cricketer or just starting out — all ages, all backgrounds. Step onto the pitch with us!</p>
-    <p class="join-desc" data-lang="cs" style="display:none;">Ať už jsi zkušený hráč kriketu nebo teprve začínáš — všechny věkové kategorie, všechny zázemí. Pojď s námi na hřiště!</p>
-    <form class="join-form" onsubmit="handleJoin(event)">
-      <input type="text" placeholder="Full Name / Celé jméno" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Phone / Telefon">
-      <select required>
-        <option value="" disabled selected>Experience Level / Úroveň zkušeností</option>
-        <option value="beginner">Beginner / Začátečník</option>
-        <option value="intermediate">Intermediate / Středně pokročilý</option>
-        <option value="advanced">Advanced / Pokročilý</option>
-        <option value="professional">Professional / Profesionální</option>
-      </select>
-      <textarea placeholder="Tell us about yourself / Řekni nám o sobě"></textarea>
-      <button type="submit" class="btn btn-navy" style="width:100%;justify-content:center;">
-        <span data-lang="en">Submit Application</span><span data-lang="cs">Odeslat přihlášku</span> 🏏
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div>
-      <span class="section-tag"><span data-lang="en">Get in Touch</span><span data-lang="cs">Kontakt</span></span>
-      <h2 class="section-title"><span data-lang="en">Contact <span>Us</span></span><span data-lang="cs">Kontaktujte <span>nás</span></span></h2>
-      <ul class="contact-info-list">
-        <li class="contact-info-item animate">
-          <div class="contact-icon">📍</div>
-          <div>
-            <h4 data-lang="en">Address</h4><h4 data-lang="cs" style="display:none;">Adresa</h4>
-            <p>Polerady 332/2, 250 63 Polerady</p>
-            <p>Czech Republic</p>
-          </div>
-        </li>
-        <li class="contact-info-item animate animate-delay-1">
-          <div class="contact-icon">🌐</div>
-          <div>
-            <h4>Website</h4>
-            <a href="http://saffronstrikers.cz">saffronstrikers.cz</a>
-          </div>
-        </li>
-        <li class="contact-info-item animate animate-delay-2">
-          <div class="contact-icon">📱</div>
-          <div>
-            <h4 data-lang="en">Social Media</h4><h4 data-lang="cs" style="display:none;">Sociální sítě</h4>
-            <p data-lang="en">Follow us on Instagram & Facebook</p>
-            <p data-lang="cs" style="display:none;">Sledujte nás na Instagramu a Facebooku</p>
-          </div>
-        </li>
-      </ul>
-      <div class="social-links">
-        <a href="#" class="social-link" title="Instagram" aria-label="Instagram">📷</a>
-        <a href="#" class="social-link" title="Facebook" aria-label="Facebook">📘</a>
-      </div>
-    </div>
-    <div>
-      <form class="contact-form" onsubmit="handleContact(event)">
-        <input type="text" placeholder="Your Name / Vaše jméno" required>
-        <input type="email" placeholder="Your Email / Váš email" required>
-        <input type="text" placeholder="Subject / Předmět">
-        <textarea placeholder="Message / Zpráva" required></textarea>
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
-          <span data-lang="en">Send Message</span><span data-lang="cs">Odeslat zprávu</span>
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SPONSORS ===== -->
-<div class="sponsors">
-  <div class="container">
-    <span class="section-tag"><span data-lang="en">Our Partners</span><span data-lang="cs">Naši partneři</span></span>
-    <div class="sponsors-grid">
-      <div class="sponsor-item">🐋 WhaleTank</div>
-      <div class="sponsor-item">✨ Mystara</div>
-      <div class="sponsor-item">🏅 VP1 Sports</div>
-    </div>
-  </div>
+<section class="hero" id="home"><div class="hero-bg"></div><div class="hero-diag"></div>
+<div class="container">
+<div class="hero-content">
+<div class="hero-label"><span data-lang="en">CMKS T20 League — Division 3</span><span data-lang="cs">CMKS T20 liga — Divize 3</span></div>
+<h1 data-lang="en"><span class="ac">Saffron</span> Strikers</h1><h1 data-lang="cs" style="display:none"><span class="ac">Saffron</span> Strikers</h1>
+<p class="hero-tag">Forged in Courage. United in Spirit.</p>
+<p class="hero-desc" data-lang="en">Prague's fiercest cricket club — competing in the Czech T20 league, promoting cricket culture, and building community across the Czech Republic.</p>
+<p class="hero-desc" data-lang="cs" style="display:none">Nejodvážnější kriketový klub v Praze — soutěžíme v české T20 lize, šíříme kriketovou kulturu a budujeme komunitu.</p>
+<div class="hero-actions"><a href="#join" class="btn btn-sf"><span data-lang="en">Join the Club</span><span data-lang="cs">Vstup do klubu</span></a><a href="#fixtures" class="btn btn-ol"><span data-lang="en">View Fixtures</span><span data-lang="cs">Zobrazit zápasy</span></a></div>
 </div>
+<div class="hero-vis"><div class="logo-wrap"><div class="logo-ring"></div><div class="logo-ring"></div><div class="logo-glow"></div><img src="SSSC_logo.jpeg" alt="Logo"></div></div>
+</div></section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-brand">
-      <img src="SSSC_logo.jpeg" alt="Saffron Strikers">
-      <span>Saffron Strikers Sports Club, z.s.</span>
-    </div>
-    <p class="footer-text">&copy; 2025-2026 Saffron Strikers Sports Club. <span data-lang="en">All rights reserved.</span><span data-lang="cs">Všechna práva vyhrazena.</span></p>
-    <ul class="footer-links">
-      <li><a href="#home"><span data-lang="en">Home</span><span data-lang="cs">Domů</span></a></li>
-      <li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>
-      <li><a href="#fixtures"><span data-lang="en">Fixtures</span><span data-lang="cs">Zápasy</span></a></li>
-      <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="cs">Kontakt</span></a></li>
-    </ul>
-  </div>
-</footer>
+<div class="ticker"><div class="ticker-inner" id="tickerInner">
+<div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
+<div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
+<div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
+<div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
+<div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
+<div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
+<div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
+<div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
+</div></div>
+
+<section class="section" id="about" style="background:var(--nv2)"><div class="container"><div class="about-grid">
+<div class="anim"><div class="about-card"><h3 data-lang="en">Our Mission</h3><h3 data-lang="cs" style="display:none">Naše mise</h3><p data-lang="en">Saffron Strikers Sports Club is a voluntary cricket association founded to unite people through playing, promoting, and developing cricket in the Czech Republic. We champion healthy lifestyles, cultural exchange, community cohesion and social inclusion.</p><p data-lang="cs" style="display:none">Saffron Strikers Sports Club je dobrovolný kriketový spolek založený za účelem spojování lidí prostřednictvím hraní, propagace a rozvoje kriketu v ČR.</p><span class="bg-ico">🏏</span></div></div>
+<div><div class="sh"><div class="accent-bar"></div><p class="label"><span data-lang="en">About Us</span><span data-lang="cs">O nás</span></p><h2 class="heading-lg" data-lang="en">More Than Just <span>Cricket</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Víc než jen <span>kriket</span></h2><p class="sub" data-lang="en">Founded December 14, 2025, in Prague. Registered non-profit (z.s.). Competing in CMKS T20 League Division 3 in our debut season 2026.</p><p class="sub" data-lang="cs" style="display:none">Založen 14. prosince 2025 v Praze. Registrovaný neziskový spolek. Soutěžíme v CMKS T20 lize, divize 3.</p></div>
+<div class="af-grid">
+<div class="af anim"><span class="ico">🏟️</span><h4 data-lang="en">Training & Matches</h4><h4 data-lang="cs" style="display:none">Tréninky a zápasy</h4><p data-lang="en">Weekly nets + competitive league</p><p data-lang="cs" style="display:none">Týdenní tréninky + soutěžní liga</p></div>
+<div class="af anim d1"><span class="ico">🌍</span><h4 data-lang="en">International</h4><h4 data-lang="cs" style="display:none">Mezinárodní</h4><p data-lang="en">ICC & ECC tournaments</p><p data-lang="cs" style="display:none">Turnaje ICC a ECC</p></div>
+<div class="af anim d2"><span class="ico">🤝</span><h4 data-lang="en">Community</h4><h4 data-lang="cs" style="display:none">Komunita</h4><p data-lang="en">Cultural exchange & inclusion</p><p data-lang="cs" style="display:none">Kulturní výměna a začleňování</p></div>
+<div class="af anim d3"><span class="ico">🎓</span><h4 data-lang="en">All Levels</h4><h4 data-lang="cs" style="display:none">Všechny úrovně</h4><p data-lang="en">Coaching for all ages</p><p data-lang="cs" style="display:none">Pro všechny věky</p></div>
+</div></div></div></div></section>
+
+<section class="section" id="fixtures" style="background:var(--nv)"><div class="container">
+<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">CMKS T20 League 2026</span><span data-lang="cs">CMKS T20 liga 2026</span></p><h2 class="heading-lg" data-lang="en">Season <span>Fixtures</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Sezónní <span>zápasy</span></h2></div>
+<div class="fc anim"><div class="fd"><div class="dy">03</div><div class="mo">May</div></div><div class="fm"><span class="ft">Vinohrady Portos</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">11:00</div><div>Scott Page Field</div><span class="fb">Upcoming</span></div></div>
+<div class="fc anim d1"><div class="fd"><div class="dy">14</div><div class="mo">Jun</div></div><div class="fm"><span class="ft hm">Saffron Strikers</span><span class="fv">VS</span><span class="ft">Spartans Strikers</span></div><div class="fmeta"><div class="time">15:00</div><div>Scott Page Field</div><span class="fb">Home</span></div></div>
+<div class="fc anim d2"><div class="fd"><div class="dy">11</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">UCC Wolves</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">09:00</div><div>Banks Field</div><span class="fb">Upcoming</span></div></div>
+<div class="fc anim d3"><div class="fd"><div class="dy">18</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">UCC Sharks</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">09:00</div><div>Banks Field</div><span class="fb">Upcoming</span></div></div>
+<div class="fc anim d4"><div class="fd"><div class="dy">19</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">Prague Barbarians Vikings</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">13:00</div><div>Scott Page Field</div><span class="fb">Upcoming</span></div></div>
+<div class="fc anim d5"><div class="fd"><div class="dy">26</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">KACR</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">17:00</div><div>Scott Page Field</div><span class="fb">Upcoming</span></div></div>
+<div class="fc anim"><div class="fd"><div class="dy">02</div><div class="mo">Aug</div></div><div class="fm"><span class="ft hm">Saffron Strikers</span><span class="fv">VS</span><span class="ft">Brno Warriors</span></div><div class="fmeta"><div class="time">09:00</div><div>Banks Field</div><span class="fb">Home</span></div></div>
+<div class="fc anim d1"><div class="fd"><div class="dy">08</div><div class="mo">Aug</div></div><div class="fm"><span class="ft hm">Saffron Strikers</span><span class="fv">VS</span><span class="ft">Moravian Lightning</span></div><div class="fmeta"><div class="time">11:00</div><div>Banks Field</div><span class="fb">Home</span></div></div>
+</div></section>
+
+<section class="section" id="training" style="background:var(--nv2)"><div class="container">
+<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">Nets Schedule</span><span data-lang="cs">Rozvrh tréninků</span></p><h2 class="heading-lg" data-lang="en">Training <span>Sessions</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Tréninkové <span>jednotky</span></h2><p class="sub" style="margin:12px auto 0" data-lang="en">Weekly nets at Vinor Cricket Ground. All members welcome.</p><p class="sub" style="margin:12px auto 0;display:none" data-lang="cs">Týdenní tréninky na hřišti Vinor. Všichni vítáni.</p></div>
+<div class="tabs" id="monthTabs">
+<button class="tb on" onclick="showM('apr',this)">Apr</button><button class="tb" onclick="showM('may',this)">May</button><button class="tb" onclick="showM('jun',this)">Jun</button><button class="tb" onclick="showM('jul',this)">Jul</button><button class="tb" onclick="showM('aug',this)">Aug</button><button class="tb" onclick="showM('sep',this)">Sep</button>
+</div>
+<div class="tp on" id="p-apr"><div class="tg">
+<div class="tc"><div class="td"><div class="d">07</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets training</p></div></div>
+<div class="tc"><div class="td"><div class="d">14</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets training</p></div></div>
+<div class="tc"><div class="td"><div class="d">21</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets training</p></div></div>
+<div class="tc"><div class="td"><div class="d">28</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets training</p></div></div>
+</div></div>
+<div class="tp" id="p-may"><div class="tg">
+<div class="tc"><div class="td"><div class="d">05</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>Nets (2 bays)</p></div></div>
+<div class="tc"><div class="td"><div class="d">12</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>Nets (2 bays)</p></div></div>
+<div class="tc"><div class="td"><div class="d">19</div><div class="m">May</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (×2)</h4><p>Extended session</p></div></div>
+<div class="tc"><div class="td"><div class="d">26</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>Nets (2 bays)</p></div></div>
+</div></div>
+<div class="tp" id="p-jun"><div class="tg">
+<div class="tc"><div class="td"><div class="d">02</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (×2)</h4><p>Extended (3 slots)</p></div></div>
+<div class="tc"><div class="td"><div class="d">09</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (×2)</h4><p>Extended</p></div></div>
+<div class="tc"><div class="td"><div class="d">16</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (×2)</h4><p>Extended</p></div></div>
+<div class="tc"><div class="td"><div class="d">23</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (×2)</h4><p>Extended</p></div></div>
+<div class="tc"><div class="td"><div class="d">30</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (×2)</h4><p>Extended</p></div></div>
+</div></div>
+<div class="tp" id="p-jul"><div class="tg">
+<div class="tc"><div class="td"><div class="d">07</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (×2)</h4><p>Multi-slot</p></div></div>
+<div class="tc"><div class="td"><div class="d">14</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (×2)</h4><p>Multi-slot</p></div></div>
+<div class="tc"><div class="td"><div class="d">21</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (×2)</h4><p>Multi-slot</p></div></div>
+<div class="tc"><div class="td"><div class="d">28</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (×2)</h4><p>Multi-slot</p></div></div>
+</div></div>
+<div class="tp" id="p-aug"><div class="tg">
+<div class="tc"><div class="td"><div class="d">04</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>Nets (2 bays)</p></div></div>
+<div class="tc"><div class="td"><div class="d">11</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>Nets</p></div></div>
+<div class="tc"><div class="td"><div class="d">18</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>Nets</p></div></div>
+<div class="tc"><div class="td"><div class="d">25</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>Nets</p></div></div>
+</div></div>
+<div class="tp" id="p-sep"><div class="tg">
+<div class="tc"><div class="td"><div class="d">01</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+<div class="tc"><div class="td"><div class="d">08</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+<div class="tc"><div class="td"><div class="d">15</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+<div class="tc"><div class="td"><div class="d">22</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+<div class="tc"><div class="td"><div class="d">29</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+</div></div>
+</div></section>
+
+<section class="section" id="team" style="background:var(--nv)"><div class="container">
+<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">The Squad</span><span data-lang="cs">Sestava</span></p><h2 class="heading-lg" data-lang="en">Meet The <span>Team</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Poznej <span>tým</span></h2></div>
+<div class="team-grid">
+<div class="pl anim"><div class="pl-top"><span class="num">01</span><span class="bdg">🏏</span></div><div class="pl-bot"><h4>Parth Bhalodiya</h4><span class="pos" data-lang="en">Founder</span><span class="pos" data-lang="cs" style="display:none">Zakladatel</span></div></div>
+<div class="pl anim d1"><div class="pl-top"><span class="num">02</span><span class="bdg">🏏</span></div><div class="pl-bot"><h4>Smit Patel</h4><span class="pos" data-lang="en">Founder</span><span class="pos" data-lang="cs" style="display:none">Zakladatel</span></div></div>
+<div class="pl anim d2"><div class="pl-top"><span class="num">03</span><span class="bdg">🏏</span></div><div class="pl-bot"><h4>Neel Pandya</h4><span class="pos" data-lang="en">Founder</span><span class="pos" data-lang="cs" style="display:none">Zakladatel</span></div></div>
+<div class="pl anim d3"><div class="pl-top"><span class="num">04</span><span class="bdg">🏏</span></div><div class="pl-bot"><h4>Harsh Jadawala</h4><span class="pos" data-lang="en">Founder</span><span class="pos" data-lang="cs" style="display:none">Zakladatel</span></div></div>
+<div class="pl rec anim d4"><div class="pl-top"><span class="num">+</span></div><div class="pl-bot"><h4 data-lang="en">Join the Squad</h4><h4 data-lang="cs" style="display:none">Přidej se</h4><span class="pos" data-lang="en">Recruiting!</span><span class="pos" data-lang="cs" style="display:none">Nabíráme!</span></div></div>
+</div></div></section>
+
+<section class="section" id="gallery" style="background:var(--nv2)"><div class="container">
+<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">Moments</span><span data-lang="cs">Momenty</span></p><h2 class="heading-lg" data-lang="en">Photo <span>Gallery</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Foto<span>galerie</span></h2></div>
+<div class="gg">
+<div class="gi anim"><div class="gph"><span class="em">🏏</span><span data-lang="en">Match Day</span><span data-lang="cs">Zápasy</span></div></div>
+<div class="gi anim d1"><div class="gph"><span class="em">🏟️</span><span data-lang="en">Training</span><span data-lang="cs">Tréninky</span></div></div>
+<div class="gi anim d2"><div class="gph"><span class="em">🏆</span><span data-lang="en">Tournaments</span><span data-lang="cs">Turnaje</span></div></div>
+<div class="gi anim d3"><div class="gph"><span class="em">🤝</span><span data-lang="en">Community</span><span data-lang="cs">Komunita</span></div></div>
+<div class="gi anim d4"><div class="gph"><span class="em">🎉</span><span data-lang="en">Club Life</span><span data-lang="cs">Život klubu</span></div></div>
+</div>
+<p style="text-align:center;margin-top:20px;font-size:13px;color:var(--g4)" data-lang="en">📸 Photos coming soon!</p><p style="text-align:center;margin-top:20px;font-size:13px;color:var(--g4);display:none" data-lang="cs">📸 Fotky brzy!</p>
+</div></section>
+
+<section class="section join-s" id="join"><div class="container"><div class="jg">
+<div><div class="sh"><div class="accent-bar" style="background:var(--nv)"></div><p class="label" style="color:var(--nv)"><span data-lang="en">Become a Striker</span><span data-lang="cs">Staň se Strikerem</span></p><h2 class="heading-lg" data-lang="en">Join <span style="color:var(--nv)">Our Team</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Přidej se k <span style="color:var(--nv)">nám</span></h2><p class="sub" style="color:rgba(255,255,255,.85)" data-lang="en">All ages, all backgrounds, all skill levels welcome. Step onto the pitch with us!</p><p class="sub" style="color:rgba(255,255,255,.85);display:none" data-lang="cs">Všechny věky a úrovně vítány!</p></div></div>
+<form class="jf" onsubmit="handleJ(event)">
+<input type="text" placeholder="Full Name / Celé jméno" required>
+<input type="email" placeholder="Email" required>
+<input type="tel" placeholder="Phone / Telefon">
+<select required><option value="" disabled selected>Experience / Zkušenosti</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Professional</option></select>
+<textarea placeholder="About you / O tobě"></textarea>
+<button type="submit" class="btn btn-dk" style="width:100%;justify-content:center"><span data-lang="en">Submit</span><span data-lang="cs">Odeslat</span></button>
+</form></div></div></section>
+
+<section class="section" id="contact" style="background:var(--nv)"><div class="container"><div class="cg">
+<div><div class="sh"><div class="accent-bar"></div><p class="label"><span data-lang="en">Get in Touch</span><span data-lang="cs">Kontakt</span></p><h2 class="heading-lg" data-lang="en">Contact <span>Us</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Kontaktujte <span>nás</span></h2></div>
+<ul class="cl">
+<li class="ci"><div class="cico">📍</div><div><h4 data-lang="en">Address</h4><h4 data-lang="cs" style="display:none">Adresa</h4><p>Polerady 332/2, 250 63<br>Czech Republic</p></div></li>
+<li class="ci"><div class="cico">🌐</div><div><h4>Website</h4><a href="https://saffronstrikers.cz">saffronstrikers.cz</a></div></li>
+<li class="ci"><div class="cico">📱</div><div><h4 data-lang="en">Follow Us</h4><h4 data-lang="cs" style="display:none">Sledujte nás</h4><p>Instagram & Facebook</p></div></li>
+</ul>
+<div class="sr"><a href="#" class="sl" title="Instagram">📷</a><a href="#" class="sl" title="Facebook">📘</a></div>
+</div>
+<form class="cf" onsubmit="handleC(event)">
+<input type="text" placeholder="Name / Jméno" required><input type="email" placeholder="Email" required><input type="text" placeholder="Subject / Předmět">
+<textarea placeholder="Message / Zpráva" required></textarea>
+<button type="submit" class="btn btn-sf" style="width:100%;justify-content:center"><span data-lang="en">Send</span><span data-lang="cs">Odeslat</span></button>
+</form></div></div></section>
+
+<div class="spb"><div class="container"><p class="label" style="text-align:center;margin-bottom:24px"><span data-lang="en">Our Partners</span><span data-lang="cs">Partneři</span></p><div class="spf"><div class="sp">🐋 WhaleTank</div><div class="sp">✨ Mystara</div><div class="sp">🏅 VP1 Sports</div></div></div></div>
+
+<footer class="footer"><div class="container">
+<div class="fb2"><img src="SSSC_logo.jpeg" alt="SSSC"><span>Saffron Strikers, z.s.</span></div>
+<p class="fc2">© 2025–2026 Saffron Strikers Sports Club</p>
+<ul class="fn"><li><a href="#home">Home</a></li><li><a href="#fixtures">Fixtures</a></li><li><a href="#contact">Contact</a></li></ul>
+</div></footer>
 
 <script>
-// ===== LANGUAGE TOGGLE =====
-function setLang(lang) {
-  document.body.classList.toggle('lang-cs', lang === 'cs');
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.textContent.trim() === (lang === 'cs' ? 'CZ' : 'EN'));
-  });
-  localStorage.setItem('sssc-lang', lang);
-}
-// Load saved language
-const savedLang = localStorage.getItem('sssc-lang');
-if (savedLang) setLang(savedLang);
-
-// ===== MOBILE MENU =====
-function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('open');
-}
-// Close on link click
-document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  });
-});
-
-// ===== SCROLL ANIMATIONS =====
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-
-// ===== FORM HANDLERS =====
-function handleJoin(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.innerHTML = '✅ Application Received! / Přihláška přijata!';
-  btn.style.background = '#2E7D32';
-  setTimeout(() => {
-    btn.innerHTML = '<span data-lang="en">Submit Application</span><span data-lang="cs">Odeslat přihlášku</span> 🏏';
-    btn.style.background = '';
-    e.target.reset();
-  }, 3000);
-}
-function handleContact(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.innerHTML = '✅ Message Sent! / Zpráva odeslána!';
-  btn.style.background = '#2E7D32';
-  setTimeout(() => {
-    btn.innerHTML = '<span data-lang="en">Send Message</span><span data-lang="cs">Odeslat zprávu</span>';
-    btn.style.background = '';
-    e.target.reset();
-  }, 3000);
-}
-
-// ===== ACTIVE NAV HIGHLIGHT =====
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section[id]');
-  let current = '';
-  sections.forEach(section => {
-    const top = section.offsetTop - 120;
-    if (window.pageYOffset >= top) current = section.getAttribute('id');
-  });
-  document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--saffron)' : '';
-  });
-});
+function setLang(l){document.body.classList.toggle('cs',l==='cs');document.querySelectorAll('.lang-sw button').forEach(b=>b.classList.toggle('on',b.textContent.trim()===(l==='cs'?'CZ':'EN')));try{localStorage.setItem('ss-l',l)}catch(e){}}
+try{const s=localStorage.getItem('ss-l');if(s)setLang(s)}catch(e){}
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50)});
+document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navMenu').classList.remove('open')));
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
+function showM(m,btn){document.querySelectorAll('.tp').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));document.getElementById('p-'+m).classList.add('on');btn.classList.add('on')}
+function handleJ(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='✅ Received!';b.style.background='#00C853';setTimeout(()=>{b.innerHTML='<span data-lang="en">Submit</span><span data-lang="cs">Odeslat</span>';b.style.background='';e.target.reset()},3000)}
+function handleC(e){e.preventDefault();const b=e.target.querySelector('button');b.innerHTML='✅ Sent!';b.style.background='#00C853';setTimeout(()=>{b.innerHTML='<span data-lang="en">Send</span><span data-lang="cs">Odeslat</span>';b.style.background='';e.target.reset()},3000)}
+window.addEventListener('scroll',()=>{let c='';document.querySelectorAll('section[id]').forEach(s=>{if(window.pageYOffset>=s.offsetTop-120)c=s.id});document.querySelectorAll('.nav-menu a[href^="#"]').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+c)})});
 </script>
-
 </body>
 </html>
