@@ -1,414 +1,840 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saffron Strikers Sports Club | Cricket in Czech Republic</title>
-<meta name="description" content="Saffron Strikers Sports Club - Prague-based cricket club competing in CMKS T20 League Division 3. Forged in Courage. United in Spirit.">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYBTTYJ255"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CYBTTYJ255');</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--sf:#E8621C;--sf2:#FF7A2F;--sf3:#C84E10;--nv:#0A0E1A;--nv2:#141829;--nv3:#1E2340;--wh:#FFF;--gd:#FFB830;--g4:#8B8FA8;--g6:#5A5E78;--gn:#00C853}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:'Poppins',sans-serif;color:var(--wh);background:var(--nv);overflow-x:hidden;line-height:1.6}
-.container{max-width:1200px;margin:0 auto;padding:0 24px}
-[data-lang="cs"]{display:none}body.cs [data-lang="en"]{display:none!important}body.cs [data-lang="cs"]{display:inline!important}
-body.cs div[data-lang="cs"],body.cs p[data-lang="cs"],body.cs h1[data-lang="cs"],body.cs h2[data-lang="cs"],body.cs h3[data-lang="cs"],body.cs span[data-lang="cs"]{display:inline!important}
-body.cs div[data-lang="en"],body.cs p[data-lang="en"],body.cs h1[data-lang="en"],body.cs h2[data-lang="en"],body.cs h3[data-lang="en"],body.cs span[data-lang="en"]{display:none!important}
-.label{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--sf)}
-.heading-lg{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,4vw,3.2rem);text-transform:uppercase;line-height:1;letter-spacing:-.5px}
-.heading-lg span{color:var(--sf)}
-.accent-bar{width:50px;height:3px;background:var(--sf);margin-bottom:16px}
-.sub{font-size:15px;color:var(--g4);max-width:500px;margin-top:12px;line-height:1.7}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 36px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .4s;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 100%,12px 100%)}
-.btn-sf{background:var(--sf);color:var(--wh)}.btn-sf:hover{background:var(--sf2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(232,98,28,.4)}
-.btn-ol{background:transparent;color:var(--wh);border:2px solid rgba(255,255,255,.4);clip-path:polygon(0 0,calc(100% - 12px) 0,100% 100%,12px 100%)}.btn-ol:hover{border-color:var(--sf);color:var(--sf)}
-.btn-dk{background:var(--nv);color:var(--wh)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
-@keyframes slideR{from{opacity:0;transform:translateX(-80px)}to{opacity:1;transform:translateX(0)}}
-@keyframes glow{0%,100%{box-shadow:0 0 20px rgba(232,98,28,.2)}50%{box-shadow:0 0 40px rgba(232,98,28,.4)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
-.anim{opacity:0}.anim.show{animation:fadeUp .6s ease forwards}
-.d1{animation-delay:.1s!important}.d2{animation-delay:.2s!important}.d3{animation-delay:.3s!important}.d4{animation-delay:.4s!important}.d5{animation-delay:.5s!important}
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,14,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(232,98,28,.2);transition:all .3s}
-.nav.scrolled{background:rgba(10,14,26,.98);border-bottom-color:var(--sf)}
-.nav .container{display:flex;align-items:center;justify-content:space-between;height:72px}
-.nav-brand{display:flex;align-items:center;gap:14px;text-decoration:none}
-.nav-brand img{height:48px}
-.nav-brand-text{font-family:'Oswald',sans-serif;font-weight:700;font-size:18px;color:var(--wh);text-transform:uppercase;letter-spacing:1px;line-height:1.1}
-.nav-brand-text small{display:block;font-family:'Rajdhani',sans-serif;font-size:10px;letter-spacing:3px;color:var(--sf);font-weight:600}
-.nav-menu{display:flex;align-items:center;gap:6px;list-style:none}
-.nav-menu a{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.7);text-decoration:none;padding:8px 14px;transition:color .3s}
-.nav-menu a:hover,.nav-menu a.active{color:var(--sf)}
-.nav-cta{display:flex;align-items:center;gap:12px}
-.lang-sw{display:flex;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden}
-.lang-sw button{padding:6px 14px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:12px;letter-spacing:1px;background:transparent;border:none;color:rgba(255,255,255,.5);cursor:pointer;transition:all .3s}
-.lang-sw button.on{background:var(--sf);color:var(--wh)}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.burger span{width:24px;height:2px;background:var(--wh);transition:all .3s}
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:var(--nv)}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,var(--nv) 0%,var(--nv2) 40%,rgba(232,98,28,.08) 100%),radial-gradient(ellipse at 80% 50%,rgba(232,98,28,.12) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(232,98,28,.06) 0%,transparent 50%)}
-.hero-diag{position:absolute;bottom:0;left:0;right:0;height:120px;background:var(--nv);clip-path:polygon(0 60%,100% 0,100% 100%,0 100%);z-index:2}
-.hero .container{position:relative;z-index:3;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:100px;padding-bottom:140px}
-.hero-content{animation:slideR .8s ease}
-.hero-label{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:14px;letter-spacing:5px;text-transform:uppercase;color:var(--sf);margin-bottom:12px;display:flex;align-items:center;gap:12px}
-.hero-label::before{content:'';width:40px;height:2px;background:var(--sf)}
-.hero h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(3.5rem,7vw,6rem);text-transform:uppercase;line-height:.9;letter-spacing:-2px;margin-bottom:6px}
-.hero h1 .ac{color:var(--sf);display:block}
-.hero-tag{font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(1rem,2vw,1.3rem);color:var(--gd);letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fadeUp .6s ease .3s forwards}
-.hero-desc{font-size:15px;color:rgba(255,255,255,.6);max-width:460px;margin-bottom:36px;line-height:1.7;opacity:0;animation:fadeUp .6s ease .5s forwards}
-.hero-actions{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp .6s ease .6s forwards}
-.hero-vis{display:flex;justify-content:center;align-items:center;opacity:0;animation:fadeUp .8s ease .4s forwards}
-.logo-wrap{width:360px;height:360px;position:relative;display:flex;align-items:center;justify-content:center}
-.logo-ring{position:absolute;width:100%;height:100%;border-radius:50%;border:1px solid rgba(232,98,28,.15);animation:float 5s ease-in-out infinite}
-.logo-ring:nth-child(2){width:85%;height:85%;top:7.5%;left:7.5%;border-color:rgba(232,98,28,.1);animation-delay:-1.5s}
-.logo-glow{position:absolute;width:60%;height:60%;border-radius:50%;top:20%;left:20%;background:radial-gradient(circle,rgba(232,98,28,.15) 0%,transparent 70%);filter:blur(30px);animation:glow 3s ease-in-out infinite}
-.logo-wrap img{width:240px;position:relative;z-index:2;filter:drop-shadow(0 10px 50px rgba(232,98,28,.3))}
-.ticker{background:var(--sf);padding:14px 0;position:relative;z-index:4;overflow:hidden;white-space:nowrap}
-.ticker-inner{display:inline-flex;animation:tickerScroll 30s linear infinite}
-.ticker-item{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--wh);padding:0 40px;display:flex;align-items:center;gap:10px}
-.ticker-item .dot{width:6px;height:6px;background:rgba(255,255,255,.5);border-radius:50%}
-@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.section{padding:100px 0;position:relative}
-.sh{margin-bottom:50px}.sh.c{text-align:center}
-.sh.c .accent-bar{margin:0 auto 16px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-card{background:linear-gradient(135deg,var(--nv2),var(--nv3));border:1px solid rgba(232,98,28,.15);padding:40px;position:relative;overflow:hidden;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px))}
-.about-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--sf)}
-.about-card h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.6rem;text-transform:uppercase;color:var(--sf);margin-bottom:16px}
-.about-card p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.8}
-.about-card .bg-ico{position:absolute;bottom:-10px;right:10px;font-size:5rem;opacity:.06}
-.af-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
-.af{background:rgba(232,98,28,.06);border:1px solid rgba(232,98,28,.1);padding:20px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
-.af .ico{font-size:1.4rem;margin-bottom:10px;display:block}
-.af h4{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--wh);margin-bottom:4px}
-.af p{font-size:12px;color:var(--g4);line-height:1.5}
-.fc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:24px 28px;margin-bottom:12px;display:grid;grid-template-columns:100px 1fr 140px;align-items:center;gap:24px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px))}
-.fc:hover{background:rgba(232,98,28,.06);border-color:rgba(232,98,28,.2);transform:translateX(4px)}
-.fd{text-align:center}.fd .dy{font-family:'Oswald',sans-serif;font-weight:700;font-size:2rem;color:var(--sf);line-height:1}
-.fd .mo{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--g4)}
-.fm{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.ft{font-family:'Oswald',sans-serif;font-weight:600;font-size:16px;text-transform:uppercase;color:var(--wh)}
-.ft.hm{color:var(--sf)}
-.fv{font-family:'Oswald',sans-serif;font-weight:700;font-size:14px;color:var(--g4);background:rgba(255,255,255,.05);padding:4px 12px;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 100%,6px 100%)}
-.fmeta{text-align:right;font-size:12px;color:var(--g4)}
-.fmeta .time{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;color:var(--wh)}
-.fb{display:inline-block;padding:3px 10px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;clip-path:polygon(0 0,calc(100% - 5px) 0,100% 100%,5px 100%);margin-top:4px}
-.fb.home{background:rgba(0,200,83,.15);color:var(--gn)}
-.fb.away{background:rgba(232,98,28,.15);color:var(--sf2)}
-.tabs{display:flex;gap:4px;margin-bottom:30px;justify-content:center;flex-wrap:wrap}
-.tb{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:10px 24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.5);cursor:pointer;transition:all .3s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 100%,8px 100%)}
-.tb.on{background:var(--sf);border-color:var(--sf);color:var(--wh)}
-.tp{display:none}.tp.on{display:block}
-.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.tc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:20px 24px;display:flex;align-items:center;gap:18px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px))}
-.tc:hover{background:rgba(232,98,28,.06);border-color:rgba(232,98,28,.15)}
-.td{text-align:center;flex-shrink:0;width:56px}
-.td .d{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.6rem;color:var(--sf);line-height:1}
-.td .m{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--g4)}
-.ti h4{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;color:var(--wh)}
-.ti p{font-size:12px;color:var(--g4)}
-/* TEAM */
-.team-sub{margin-bottom:20px}
-.team-sub h3{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.4rem;text-transform:uppercase;color:var(--sf);margin-bottom:16px;display:flex;align-items:center;gap:12px}
-.team-sub h3::before{content:'';width:30px;height:2px;background:var(--sf)}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-bottom:50px}
-.pl{background:linear-gradient(180deg,var(--nv3) 0%,var(--nv2) 100%);border:1px solid rgba(255,255,255,.06);overflow:hidden;transition:all .4s;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px))}
-.pl:hover{border-color:var(--sf);transform:translateY(-6px);box-shadow:0 12px 40px rgba(232,98,28,.15)}
-.pl-top{height:140px;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--nv2),rgba(232,98,28,.08));display:flex;align-items:center;justify-content:center}
-.pl-top .num{font-family:'Oswald',sans-serif;font-weight:700;font-size:4rem;color:rgba(232,98,28,.12)}
-.pl-top .photo-placeholder{width:80px;height:80px;border-radius:50%;background:rgba(232,98,28,.1);border:2px dashed rgba(232,98,28,.25);display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:rgba(255,255,255,.2)}
-.pl-bot{padding:14px 16px;text-align:center;border-top:2px solid rgba(232,98,28,.2)}
-.pl-bot h4{font-family:'Oswald',sans-serif;font-weight:600;font-size:13px;text-transform:uppercase;color:var(--wh);margin-bottom:2px;line-height:1.2}
-.pl-bot .pos{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sf);display:block;margin-top:2px}
-.pl.rec .pl-top{background:linear-gradient(135deg,var(--sf3),var(--sf))}.pl.rec .pl-top .num{color:rgba(255,255,255,.15)}
-.pl.committee .pl-top{background:linear-gradient(135deg,var(--nv3),rgba(232,98,28,.15))}
-/* GALLERY */
-.gg{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:12px}
-.gi{overflow:hidden;position:relative;cursor:pointer;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:transform .3s}
-.gi:hover{transform:scale(1.02)}.gi:first-child{grid-column:span 2;grid-row:span 2}
-.gph{width:100%;height:100%;background:linear-gradient(135deg,var(--nv2),var(--nv3),rgba(232,98,28,.1));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
-.gph .em{font-size:2rem;opacity:.4}
-.gph span{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4)}
-.join-s{background:linear-gradient(135deg,var(--sf) 0%,var(--sf3) 100%);position:relative;overflow:hidden}
-.join-s::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 25px,rgba(255,255,255,.03) 25px,rgba(255,255,255,.03) 26px)}
-.join-s .container{position:relative;z-index:1}
-.jg{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.jf{display:grid;gap:14px}
-.jf input,.jf select,.jf textarea{width:100%;padding:14px 18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:var(--wh);font-family:'Poppins',sans-serif;font-size:14px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
-.jf input::placeholder,.jf textarea::placeholder{color:rgba(255,255,255,.5)}
-.jf input:focus,.jf select:focus,.jf textarea:focus{outline:none;border-color:var(--wh);background:rgba(255,255,255,.18)}
-.jf select{appearance:none;cursor:pointer}.jf select option{background:var(--nv);color:var(--wh)}
-.jf textarea{resize:vertical;min-height:80px}
-.cg{display:grid;grid-template-columns:1fr 1fr;gap:60px}
-.cl{list-style:none;display:grid;gap:28px;margin-top:24px}
-.ci{display:flex;gap:16px;align-items:flex-start}
-.cico{width:50px;height:50px;background:rgba(232,98,28,.1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
-.ci h4{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--sf);margin-bottom:2px}
-.ci p,.ci a{font-size:14px;color:rgba(255,255,255,.6);text-decoration:none;transition:color .3s}
-.ci a:hover{color:var(--sf)}
-.sr{display:flex;gap:10px;margin-top:30px}
-.sl{width:44px;height:44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:1.1rem;text-decoration:none;transition:all .3s;clip-path:polygon(0 0,calc(100% - 6px) 0,100% 6px,100% 100%,6px 100%,0 calc(100% - 6px))}
-.sl:hover{background:var(--sf);border-color:var(--sf);transform:translateY(-3px)}
-.sl img{width:22px;height:22px;filter:invert(1)}
-.cf{display:grid;gap:14px}
-.cf input,.cf textarea{width:100%;padding:14px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--wh);font-family:'Poppins',sans-serif;font-size:14px;transition:all .3s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px))}
-.cf input::placeholder,.cf textarea::placeholder{color:rgba(255,255,255,.3)}
-.cf input:focus,.cf textarea:focus{outline:none;border-color:var(--sf);background:rgba(255,255,255,.06)}
-.cf textarea{resize:vertical;min-height:120px}
-.spb{padding:50px 0;background:var(--nv2);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
-.spf{display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap}
-.sp{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.4rem;color:var(--g4);letter-spacing:2px;text-transform:uppercase;opacity:.5;transition:all .3s}
-.sp:hover{opacity:1;color:var(--sf)}
-.footer{background:#060812;padding:30px 0 20px;border-top:2px solid var(--sf)}
-.footer .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
-.fb2{display:flex;align-items:center;gap:10px}
-.fb2 img{height:36px}.fb2 span{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;color:var(--wh);text-transform:uppercase}
-.fc2{font-size:12px;color:var(--g6)}
-.fn{display:flex;gap:20px;list-style:none}
-.fn a{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--g4);text-decoration:none;transition:color .3s}
-.fn a:hover{color:var(--sf)}
-@media(max-width:1024px){
-.hero .container{grid-template-columns:1fr;text-align:center;padding-top:120px}
-.hero-label{justify-content:center}.hero-desc{margin:0 auto 36px}.hero-actions{justify-content:center}
-.hero-vis{order:-1}.logo-wrap{width:260px;height:260px}.logo-wrap img{width:180px}
-.about-grid,.jg,.cg{grid-template-columns:1fr}
-.nav-menu{display:none}.burger{display:flex}
-.nav-menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--nv);padding:20px;border-bottom:2px solid var(--sf);gap:8px}
-.fc{grid-template-columns:80px 1fr;gap:16px}.fmeta{grid-column:1/-1;text-align:left}
-}
-@media(max-width:640px){
-.af-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:repeat(2,1fr)}
-.gg{grid-template-columns:1fr 1fr;grid-auto-rows:160px}.gi:first-child{grid-column:span 2}
-.tg{grid-template-columns:1fr}.footer .container{flex-direction:column;text-align:center}
-.fc{grid-template-columns:1fr}.fd{text-align:left}.fm{flex-wrap:wrap}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffron Strikers Sports Club | Cricket in Czech Republic</title>
+    <meta name="description" content="Saffron Strikers Sports Club - Prague-based cricket club competing in CMKS T20 League Division 3. Forged in Courage. United in Spirit.">
+    
+    <!-- Favicon / Logo Setup -->
+    <link rel="icon" type="image/jpeg" href="SSSC_logo.jpeg">
+    <link rel="apple-touch-icon" href="SSSC_logo.jpeg">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYBTTYJ255"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CYBTTYJ255');</script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- External JS -->
+    <script src="main.js" defer></script>
 </head>
 <body>
-<nav class="nav" id="mainNav"><div class="container">
-<a href="#home" class="nav-brand"><img src="SSSC_logo.jpeg" alt="Saffron Strikers"><div class="nav-brand-text">Saffron Strikers<small>Sports Club, z.s.</small></div></a>
-<ul class="nav-menu" id="navMenu">
-<li><a href="#home"><span data-lang="en">Home</span><span data-lang="cs">Domů</span></a></li>
-<li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>
-<li><a href="#fixtures"><span data-lang="en">Fixtures</span><span data-lang="cs">Zápasy</span></a></li>
-<li><a href="#training"><span data-lang="en">Training</span><span data-lang="cs">Tréninky</span></a></li>
-<li><a href="#team"><span data-lang="en">Squad</span><span data-lang="cs">Tým</span></a></li>
-<li><a href="#gallery"><span data-lang="en">Gallery</span><span data-lang="cs">Galerie</span></a></li>
-<li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="cs">Kontakt</span></a></li>
-</ul>
-<div class="nav-cta">
-<div class="lang-sw"><button class="on" onclick="setLang('en')">EN</button><button onclick="setLang('cs')">CZ</button></div>
-<a href="#join" class="btn btn-sf" style="padding:10px 24px;font-size:12px"><span data-lang="en">Join Us</span><span data-lang="cs">Přidej se</span></a>
-</div>
-<button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')"><span></span><span></span><span></span></button>
-</div></nav>
+    <nav class="nav" id="mainNav">
+        <div class="container">
+            <a href="#home" class="nav-brand">
+                <img src="SSSC_logo.jpeg" alt="Saffron Strikers">
+                <div class="nav-brand-text">Saffron Strikers<small>Sports Club, z.s.</small></div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home"><span data-lang="en">Home</span><span data-lang="cs">Domů</span></a></li>
+                <li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>
+                <li><a href="#fixtures"><span data-lang="en">Fixtures</span><span data-lang="cs">Zápasy</span></a></li>
+                <li><a href="#training"><span data-lang="en">Training</span><span data-lang="cs">Tréninky</span></a></li>
+                <li><a href="#team"><span data-lang="en">Squad</span><span data-lang="cs">Tým</span></a></li>
+                <li><a href="#gallery"><span data-lang="en">Gallery</span><span data-lang="cs">Galerie</span></a></li>
+                <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="cs">Kontakt</span></a></li>
+            </ul>
+            <div class="nav-cta">
+                <div class="lang-sw">
+                    <button class="on" onclick="setLang('en')">EN</button>
+                    <button onclick="setLang('cs')">CZ</button>
+                </div>
+                <a href="#join" class="btn btn-sf" style="padding:10px 24px;font-size:12px">
+                    <span data-lang="en">Join Us</span><span data-lang="cs">Přidej se</span>
+                </a>
+            </div>
+            <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
 
-<section class="hero" id="home"><div class="hero-bg"></div><div class="hero-diag"></div>
-<div class="container">
-<div class="hero-content">
-<div class="hero-label"><span data-lang="en">CMKS T20 League — Division 3</span><span data-lang="cs">CMKS T20 liga — Divize 3</span></div>
-<h1 data-lang="en"><span class="ac">Saffron</span> Strikers</h1><h1 data-lang="cs" style="display:none"><span class="ac">Saffron</span> Strikers</h1>
-<p class="hero-tag">Forged in Courage. United in Spirit.</p>
-<p class="hero-desc" data-lang="en">Prague's fiercest cricket club — competing in the Czech T20 league, promoting cricket culture, and building community across the Czech Republic.</p>
-<p class="hero-desc" data-lang="cs" style="display:none">Nejodvážnější kriketový klub v Praze — soutěžíme v české T20 lize, šíříme kriketovou kulturu a budujeme komunitu.</p>
-<div class="hero-actions"><a href="#join" class="btn btn-sf"><span data-lang="en">Join the Club</span><span data-lang="cs">Vstup do klubu</span></a><a href="#fixtures" class="btn btn-ol"><span data-lang="en">View Fixtures</span><span data-lang="cs">Zobrazit zápasy</span></a></div>
-</div>
-<div class="hero-vis"><div class="logo-wrap"><div class="logo-ring"></div><div class="logo-ring"></div><div class="logo-glow"></div><img src="SSSC_logo.jpeg" alt="Logo"></div></div>
-</div></section>
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-diag"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">
+                    <span data-lang="en">CMKS T20 League — Division 3</span>
+                    <span data-lang="cs">CMKS T20 liga — Divize 3</span>
+                </div>
+                <h1 data-lang="en"><span class="ac">Saffron</span> Strikers</h1>
+                <h1 data-lang="cs" style="display:none"><span class="ac">Saffron</span> Strikers</h1>
+                <p class="hero-tag">Forged in Courage. United in Spirit.</p>
+                <p class="hero-desc" data-lang="en">Prague's fiercest cricket club — competing in the Czech T20 league, promoting cricket culture, and building community across the Czech Republic.</p>
+                <p class="hero-desc" data-lang="cs" style="display:none">Nejodvážnější kriketový klub v Praze — soutěžíme v české T20 lize, šíříme kriketovou kulturu a budujeme komunitu.</p>
+                <div class="hero-actions">
+                    <a href="#join" class="btn btn-sf"><span data-lang="en">Join the Club</span><span data-lang="cs">Vstup do klubu</span></a>
+                    <a href="#fixtures" class="btn btn-ol"><span data-lang="en">View Fixtures</span><span data-lang="cs">Zobrazit zápasy</span></a>
+                </div>
+            </div>
+            <div class="hero-vis">
+                <div class="logo-wrap">
+                    <div class="logo-ring"></div>
+                    <div class="logo-ring"></div>
+                    <div class="logo-glow"></div>
+                    <img src="SSSC_logo.jpeg" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="ticker"><div class="ticker-inner">
-<div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
-<div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
-<div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
-<div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
-<div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
-<div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
-<div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
-<div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
-</div></div>
+    <div class="ticker">
+        <div class="ticker-inner">
+            <div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
+            <div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
+            <div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
+            <div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
+            <div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
+            <div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
+            <div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
+            <div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
+        </div>
+    </div>
 
-<!-- ABOUT -->
-<section class="section" id="about" style="background:var(--nv2)"><div class="container"><div class="about-grid">
-<div class="anim"><div class="about-card"><h3 data-lang="en">Our Mission</h3><h3 data-lang="cs" style="display:none">Naše mise</h3><p data-lang="en">Saffron Strikers Sports Club is a voluntary cricket association founded to unite people through playing, promoting, and developing cricket in the Czech Republic. We champion healthy lifestyles, cultural exchange, community cohesion and social inclusion.</p><p data-lang="cs" style="display:none">Saffron Strikers Sports Club je dobrovolný kriketový spolek založený za účelem spojování lidí prostřednictvím hraní, propagace a rozvoje kriketu v ČR.</p><span class="bg-ico">🏏</span></div></div>
-<div><div class="sh"><div class="accent-bar"></div><p class="label"><span data-lang="en">About Us</span><span data-lang="cs">O nás</span></p><h2 class="heading-lg" data-lang="en">More Than Just <span>Cricket</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Víc než jen <span>kriket</span></h2><p class="sub" data-lang="en">Founded December 14, 2025, in Prague. Registered non-profit (z.s.). Competing in CMKS T20 League Division 3 in our debut season 2026.</p><p class="sub" data-lang="cs" style="display:none">Založen 14. prosince 2025 v Praze. Registrovaný neziskový spolek. Soutěžíme v CMKS T20 lize, divize 3.</p></div>
-<div class="af-grid">
-<div class="af anim"><span class="ico">🏟️</span><h4 data-lang="en">Training & Matches</h4><h4 data-lang="cs" style="display:none">Tréninky a zápasy</h4><p data-lang="en">Weekly nets + competitive league</p><p data-lang="cs" style="display:none">Týdenní tréninky + soutěžní liga</p></div>
-<div class="af anim d1"><span class="ico">🌍</span><h4 data-lang="en">International</h4><h4 data-lang="cs" style="display:none">Mezinárodní</h4><p data-lang="en">CMKS and ECC tournaments + Foreign tours</p><p data-lang="cs" style="display:none">Turnaje CMKS a ECC + zahraniční turnaje</p></div>
-<div class="af anim d2"><span class="ico">🤝</span><h4 data-lang="en">Community</h4><h4 data-lang="cs" style="display:none">Komunita</h4><p data-lang="en">Cultural exchange & inclusion</p><p data-lang="cs" style="display:none">Kulturní výměna a začleňování</p></div>
-<div class="af anim d3"><span class="ico">🎓</span><h4 data-lang="en">All Levels</h4><h4 data-lang="cs" style="display:none">Všechny úrovně</h4><p data-lang="en">Admission to people of all ages</p><p data-lang="cs" style="display:none">Přijímáme lidi všech věkových kategorií</p></div>
-</div></div></div></div></section>
+    <!-- ABOUT -->
+    <section class="section" id="about" style="background:var(--nv2)">
+        <div class="container">
+            <div class="about-grid">
+                <div class="anim">
+                    <div class="about-card">
+                        <h3 data-lang="en">Our Mission</h3>
+                        <h3 data-lang="cs" style="display:none">Naše mise</h3>
+                        <p data-lang="en">Saffron Strikers Sports Club is a voluntary cricket association founded to unite people through playing, promoting, and developing cricket in the Czech Republic. We champion healthy lifestyles, cultural exchange, community cohesion and social inclusion.</p>
+                        <p data-lang="cs" style="display:none">Saffron Strikers Sports Club je dobrovolný kriketový spolek založený za účelem spojování lidí prostřednictvím hraní, propagace a rozvoje kriketu v ČR.</p>
+                        <span class="bg-ico">🏏</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="sh">
+                        <div class="accent-bar"></div>
+                        <p class="label"><span data-lang="en">About Us</span><span data-lang="cs">O nás</span></p>
+                        <h2 class="heading-lg" data-lang="en">More Than Just <span>Cricket</span></h2>
+                        <h2 class="heading-lg" data-lang="cs" style="display:none">Víc než jen <span>kriket</span></h2>
+                        <p class="sub" data-lang="en">Founded December 14, 2025, in Prague. Registered non-profit (z.s.). Competing in CMKS T20 League Division 3 in our debut season 2026.</p>
+                        <p class="sub" data-lang="cs" style="display:none">Založen 14. prosince 2025 v Praze. Registrovaný neziskový spolek. Soutěžíme v CMKS T20 lize, divize 3.</p>
+                    </div>
+                    <div class="af-grid">
+                        <div class="af anim">
+                            <span class="ico">🏟️</span>
+                            <h4 data-lang="en">Training & Matches</h4>
+                            <h4 data-lang="cs" style="display:none">Tréninky a zápasy</h4>
+                            <p data-lang="en">Weekly nets + competitive league</p>
+                            <p data-lang="cs" style="display:none">Týdenní tréninky + soutěžní liga</p>
+                        </div>
+                        <div class="af anim d1">
+                            <span class="ico">🌍</span>
+                            <h4 data-lang="en">International</h4>
+                            <h4 data-lang="cs" style="display:none">Mezinárodní</h4>
+                            <p data-lang="en">CMKS and ECC tournaments + Foreign tours</p>
+                            <p data-lang="cs" style="display:none">Turnaje CMKS a ECC + zahraniční turnaje</p>
+                        </div>
+                        <div class="af anim d2">
+                            <span class="ico">🤝</span>
+                            <h4 data-lang="en">Community</h4>
+                            <h4 data-lang="cs" style="display:none">Komunita</h4>
+                            <p data-lang="en">Cultural exchange & inclusion</p>
+                            <p data-lang="cs" style="display:none">Kulturní výměna a začleňování</p>
+                        </div>
+                        <div class="af anim d3">
+                            <span class="ico">🎓</span>
+                            <h4 data-lang="en">All Levels</h4>
+                            <h4 data-lang="cs" style="display:none">Všechny úrovně</h4>
+                            <p data-lang="en">Admission to people of all ages</p>
+                            <p data-lang="cs" style="display:none">Přijímáme lidi všech věkových kategorií</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
 
-<!-- FIXTURES -->
-<section class="section" id="fixtures" style="background:var(--nv)"><div class="container">
-<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">CMKS T20 League 2026</span><span data-lang="cs">CMKS T20 liga 2026</span></p><h2 class="heading-lg" data-lang="en">Season <span>Fixtures</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Sezónní <span>zápasy</span></h2></div>
-<div class="fc anim"><div class="fd"><div class="dy">03</div><div class="mo">May</div></div><div class="fm"><span class="ft">Vinohrady Portos</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">11:00</div><div>Scott Page Field</div><span class="fb away">Away</span></div></div>
-<div class="fc anim d1"><div class="fd"><div class="dy">14</div><div class="mo">Jun</div></div><div class="fm"><span class="ft hm">Saffron Strikers</span><span class="fv">VS</span><span class="ft">Spartans Strikers</span></div><div class="fmeta"><div class="time">15:00</div><div>Scott Page Field</div><span class="fb home">Home</span></div></div>
-<div class="fc anim d2"><div class="fd"><div class="dy">11</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">UCC Wolves</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">09:00</div><div>Banks Field</div><span class="fb away">Away</span></div></div>
-<div class="fc anim d3"><div class="fd"><div class="dy">18</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">UCC Sharks</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">09:00</div><div>Banks Field</div><span class="fb away">Away</span></div></div>
-<div class="fc anim d4"><div class="fd"><div class="dy">19</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">Prague Barbarians Vikings</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">13:00</div><div>Scott Page Field</div><span class="fb away">Away</span></div></div>
-<div class="fc anim d5"><div class="fd"><div class="dy">26</div><div class="mo">Jul</div></div><div class="fm"><span class="ft">KACR</span><span class="fv">VS</span><span class="ft hm">Saffron Strikers</span></div><div class="fmeta"><div class="time">17:00</div><div>Scott Page Field</div><span class="fb away">Away</span></div></div>
-<div class="fc anim"><div class="fd"><div class="dy">02</div><div class="mo">Aug</div></div><div class="fm"><span class="ft hm">Saffron Strikers</span><span class="fv">VS</span><span class="ft">Brno Warriors</span></div><div class="fmeta"><div class="time">09:00</div><div>Banks Field</div><span class="fb home">Home</span></div></div>
-<div class="fc anim d1"><div class="fd"><div class="dy">08</div><div class="mo">Aug</div></div><div class="fm"><span class="ft hm">Saffron Strikers</span><span class="fv">VS</span><span class="ft">Moravian Lightning</span></div><div class="fmeta"><div class="time">11:00</div><div>Banks Field</div><span class="fb home">Home</span></div></div>
-</div></section>
+    <!-- FIXTURES -->
+    <section class="section" id="fixtures" style="background:var(--nv)">
+        <div class="container">
+            <div class="sh c">
+                <div class="accent-bar"></div>
+                <p class="label"><span data-lang="en">CMKS T20 League 2026</span><span data-lang="cs">CMKS T20 liga 2026</span></p>
+                <h2 class="heading-lg" data-lang="en">Season <span>Fixtures</span></h2>
+                <h2 class="heading-lg" data-lang="cs" style="display:none">Sezónní <span>zápasy</span></h2>
+            </div>
+            <div class="fc anim">
+                <div class="fd">
+                    <div class="dy">03</div>
+                    <div class="mo">May</div>
+                </div>
+                <div class="fm">
+                    <span class="ft">Vinohrady Portos</span>
+                    <span class="fv">VS</span>
+                    <span class="ft hm">Saffron Strikers</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">11:00</div>
+                    <div>Scott Page Field</div>
+                    <span class="fb away">Away</span>
+                </div>
+            </div>
+            <div class="fc anim d1">
+                <div class="fd">
+                    <div class="dy">14</div>
+                    <div class="mo">Jun</div>
+                </div><div class="fm">
+                    <span class="ft hm">Saffron Strikers</span>
+                    <span class="fv">VS</span>
+                    <span class="ft">Spartans Strikers</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">15:00</div>
+                    <div>Scott Page Field</div>
+                    <span class="fb home">Home</span>
+                </div>
+            </div>
+            <div class="fc anim d2">
+                <div class="fd">
+                    <div class="dy">11</div>
+                    <div class="mo">Jul</div>
+                </div>
+                <div class="fm">
+                    <span class="ft">UCC Wolves</span>
+                    <span class="fv">VS</span>
+                    <span class="ft hm">Saffron Strikers</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">09:00</div>
+                    <div>Banks Field</div>
+                    <span class="fb away">Away</span>
+                </div>
+            </div>
+            <div class="fc anim d3">
+                <div class="fd">
+                    <div class="dy">18</div>
+                    <div class="mo">Jul</div>
+                </div>
+                <div class="fm">
+                    <span class="ft">UCC Sharks</span>
+                    <span class="fv">VS</span>
+                    <span class="ft hm">Saffron Strikers</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">09:00</div>
+                    <div>Banks Field</div>
+                    <span class="fb away">Away</span>
+                </div>
+            </div>
+            <div class="fc anim d4">
+                <div class="fd">
+                    <div class="dy">19</div>
+                    <div class="mo">Jul</div>
+                </div>
+                <div class="fm">
+                    <span class="ft">Prague Barbarians Vikings</span>
+                    <span class="fv">VS</span>
+                    <span class="ft hm">Saffron Strikers</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">13:00</div>
+                    <div>Scott Page Field</div>
+                    <span class="fb away">Away</span>
+                </div>
+            </div>
+            <div class="fc anim d5">
+                <div class="fd">
+                    <div class="dy">26</div>
+                    <div class="mo">Jul</div>
+                </div><div class="fm">
+                    <span class="ft">KACR</span>
+                    <span class="fv">VS</span>
+                    <span class="ft hm">Saffron Strikers</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">17:00</div>
+                    <div>Scott Page Field</div>
+                    <span class="fb away">Away</span>
+                </div>
+            </div>
+            <div class="fc anim">
+                <div class="fd">
+                    <div class="dy">02</div>
+                    <div class="mo">Aug</div>
+                </div>
+                <div class="fm">
+                    <span class="ft hm">Saffron Strikers</span>
+                    <span class="fv">VS</span>
+                    <span class="ft">Brno Warriors</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">09:00</div>
+                    <div>Banks Field</div>
+                    <span class="fb home">Home</span>
+                </div>
+            </div>
+            <div class="fc anim d1">
+                <div class="fd">
+                    <div class="dy">08</div>
+                    <div class="mo">Aug</div>
+                </div><div class="fm">
+                    <span class="ft hm">Saffron Strikers</span>
+                    <span class="fv">VS</span>
+                    <span class="ft">Moravian Lightning</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">11:00</div>
+                    <div>Banks Field</div>
+                    <span class="fb home">Home</span>
+                </div>
+            </div>
+            <div class="fc anim d1">
+                <div class="fd">
+                    <div class="dy">22</div>
+                    <div class="mo">Aug</div>
+                </div>
+                <div class="fm">
+                    <span class="ft hm">Saffron Strikers</span>
+                    <span class="fv">VS</span>
+                    <span class="ft">Prague Barbarians Vikings</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">15:00</div>
+                    <div>Scott Page Field</div>
+                    <span class="fb" style="background:rgba(255,184,48,.15);color:var(--gd)">Semi-Final</span>
+                    <span class="fb home">Home</span>
+                </div>
+            </div>
+            <div class="fc anim d1">
+                <div class="fd">
+                    <div class="dy">29</div>
+                    <div class="mo">Aug</div>
+                </div>
+                <div class="fm">
+                    <span class="ft hm">Saffron Strikers</span>
+                    <span class="fv">VS</span>
+                    <span class="ft">UCC Wolves</span>
+                </div>
+                <div class="fmeta">
+                    <div class="time">15:00</div>
+                    <div>Scott Page Field</div>
+                    <span class="fb" style="background:rgba(255,184,48,.15);color:var(--gd)">Final</span>
+                    <span class="fb home">Home</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- TRAINING -->
-<section class="section" id="training" style="background:var(--nv2)"><div class="container">
-<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">Nets Schedule</span><span data-lang="cs">Rozvrh tréninků</span></p><h2 class="heading-lg" data-lang="en">Training <span>Sessions</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Tréninkové <span>jednotky</span></h2><p class="sub" style="margin:12px auto 0" data-lang="en">Weekly nets at Vinor Cricket Ground. All members welcome.</p><p class="sub" style="margin:12px auto 0;display:none" data-lang="cs">Týdenní tréninky na hřišti Vinor.</p></div>
-<div class="tabs">
-<button class="tb on" onclick="showM('apr',this)">Apr</button><button class="tb" onclick="showM('may',this)">May</button><button class="tb" onclick="showM('jun',this)">Jun</button><button class="tb" onclick="showM('jul',this)">Jul</button><button class="tb" onclick="showM('aug',this)">Aug</button><button class="tb" onclick="showM('sep',this)">Sep</button>
-</div>
-<div class="tp on" id="p-apr"><div class="tg">
-<div class="tc"><div class="td"><div class="d">07</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
-<div class="tc"><div class="td"><div class="d">14</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
-<div class="tc"><div class="td"><div class="d">21</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
-<div class="tc"><div class="td"><div class="d">28</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
-</div></div>
-<div class="tp" id="p-may"><div class="tg">
-<div class="tc"><div class="td"><div class="d">05</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>2 bays</p></div></div>
-<div class="tc"><div class="td"><div class="d">12</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>2 bays</p></div></div>
-<div class="tc"><div class="td"><div class="d">19</div><div class="m">May</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
-<div class="tc"><div class="td"><div class="d">26</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>2 bays</p></div></div>
-</div></div>
-<div class="tp" id="p-jun"><div class="tg">
-<div class="tc"><div class="td"><div class="d">02</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>3 slots</p></div></div>
-<div class="tc"><div class="td"><div class="d">09</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
-<div class="tc"><div class="td"><div class="d">16</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
-<div class="tc"><div class="td"><div class="d">23</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
-<div class="tc"><div class="td"><div class="d">30</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
-</div></div>
-<div class="tp" id="p-jul"><div class="tg">
-<div class="tc"><div class="td"><div class="d">07</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
-<div class="tc"><div class="td"><div class="d">14</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
-<div class="tc"><div class="td"><div class="d">21</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
-<div class="tc"><div class="td"><div class="d">28</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
-</div></div>
-<div class="tp" id="p-aug"><div class="tg">
-<div class="tc"><div class="td"><div class="d">04</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
-<div class="tc"><div class="td"><div class="d">11</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
-<div class="tc"><div class="td"><div class="d">18</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
-<div class="tc"><div class="td"><div class="d">25</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
-</div></div>
-<div class="tp" id="p-sep"><div class="tg">
-<div class="tc"><div class="td"><div class="d">01</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-<div class="tc"><div class="td"><div class="d">08</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-<div class="tc"><div class="td"><div class="d">15</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-<div class="tc"><div class="td"><div class="d">22</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-<div class="tc"><div class="td"><div class="d">29</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-</div></div>
-</div></section>
+    <!-- TRAINING -->
+    <section class="section" id="training" style="background:var(--nv2)">
+        <div class="container">
+            <div class="sh c">
+                <div class="accent-bar"></div>
+                <p class="label"><span data-lang="en">Nets Schedule</span><span data-lang="cs">Rozvrh tréninků</span></p>
+                <h2 class="heading-lg" data-lang="en">Training <span>Sessions</span></h2>
+                <h2 class="heading-lg" data-lang="cs" style="display:none">Tréninkové <span>jednotky</span></h2>
+                <p class="sub" style="margin:12px auto 0" data-lang="en">Weekly nets at Vinor Cricket Ground. All members welcome.</p>
+                <p class="sub" style="margin:12px auto 0;display:none" data-lang="cs">Týdenní tréninky na hřišti Vinor.</p>
+            </div>
+            <div class="tabs">
+                <button class="tb on" onclick="showM('apr',this)">Apr</button>
+                <button class="tb" onclick="showM('may',this)">May</button>
+                <button class="tb" onclick="showM('jun',this)">Jun</button>
+                <button class="tb" onclick="showM('jul',this)">Jul</button>
+                <button class="tb" onclick="showM('aug',this)">Aug</button>
+                <button class="tb" onclick="showM('sep',this)">Sep</button>
+            </div>
+            <div class="tp on" id="p-apr">
+                <div class="tg">
+                    <div class="tc"><div class="td"><div class="d">07</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">14</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">21</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">28</div><div class="m">Apr</div></div><div class="ti"><h4>17:00 — Lower Right Bay</h4><p>Nets</p></div></div>
+                </div>
+            </div>
+            <div class="tp" id="p-may">
+                <div class="tg">
+                    <div class="tc"><div class="td"><div class="d">05</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>2 bays</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">12</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>2 bays</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">19</div><div class="m">May</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">26</div><div class="m">May</div></div><div class="ti"><h4>17:00 — LR Bay + Upper Bay</h4><p>2 bays</p></div></div>
+                </div>
+            </div>
+            <div class="tp" id="p-jun">
+                <div class="tg">
+                    <div class="tc"><div class="td"><div class="d">02</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>3 slots</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">09</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">16</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">23</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">30</div><div class="m">Jun</div></div><div class="ti"><h4>17:00–18:00 — LR + Upper (x2)</h4><p>Extended</p></div></div>
+                </div>
+            </div>
+            <div class="tp" id="p-jul">
+                <div class="tg">
+                    <div class="tc"><div class="td"><div class="d">07</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">14</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">21</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">28</div><div class="m">Jul</div></div><div class="ti"><h4>17:00 LL + 18:00–19:00 Upper (x2)</h4><p>Multi-slot</p></div></div>
+                </div>
+            </div>
+            <div class="tp" id="p-aug">
+                <div class="tg">
+                    <div class="tc"><div class="td"><div class="d">04</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">11</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">18</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">25</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
+                </div>
+            </div>
+            <div class="tp" id="p-sep">
+                <div class="tg">
+                    <div class="tc"><div class="td"><div class="d">01</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">08</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">15</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">22</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+                    <div class="tc"><div class="td"><div class="d">29</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- TEAM -->
-<section class="section" id="team" style="background:var(--nv)"><div class="container">
-<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">The Squad</span><span data-lang="cs">Sestava</span></p><h2 class="heading-lg" data-lang="en">Meet The <span>Team</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Poznej <span>tým</span></h2></div>
+    <!-- TEAM -->
+    <section class="section" id="team" style="background:var(--nv)">
+        <div class="container">
+            <div class="sh c">
+                <div class="accent-bar"></div>
+                <p class="label"><span data-lang="en">The Squad</span><span data-lang="cs">Sestava</span></p>
+                <h2 class="heading-lg" data-lang="en">Meet The <span>Team</span></h2>
+                <h2 class="heading-lg" data-lang="cs" style="display:none">Poznej <span>tým</span></h2>
+            </div>
 
-<!-- COMMITTEE -->
-<div class="team-sub"><h3><span data-lang="en">Committee</span><span data-lang="cs">Výbor</span></h3></div>
-<div class="team-grid">
-<div class="pl committee anim"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Parth Bhalodiya</h4><span class="pos">Chairman</span></div></div>
-<div class="pl committee anim d1"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Smit Patel</h4><span class="pos">President</span></div></div>
-<div class="pl committee anim d2"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Neel Pandya</h4><span class="pos">Treasurer</span></div></div>
-<div class="pl committee anim d3"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Harsh Jadawala</h4><span class="pos">Secretary</span></div></div>
-<div class="pl committee anim d4"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Vivek Parekh</h4><span class="pos">Social Media Manager</span></div></div>
-<div class="pl committee anim d5"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Aakash Parmar</h4><span class="pos">Procurement Head</span></div></div>
-</div>
+            <!-- COMMITTEE -->
+            <div class="team-sub"><h3><span data-lang="en">Committee</span><span data-lang="cs">Výbor</span></h3></div>
+            <div class="team-grid">
+                <div class="pl committee anim">
+                    <div class="pl-top">
+                        <img src="teamPhoto/ParthB.jpg" alt="Parth Bhalodiya" class="player-photo">
+                    </div>
+                    <div class="pl-bot">
+                        <h4>Parth Bhalodiya</h4>
+                        <span class="pos">Chairman</span>
+                    </div>
+                </div> 
+                <div class="pl committee anim d1">
+                    <div class="pl-top">
+                        <img src="teamPhoto/SmitP.jpg" alt="Smit Patel" class="player-photo2">
+                    </div>
+                    <div class="pl-bot">
+                        <h4>Smit Patel</h4>
+                        <span class="pos">President</span>
+                    </div>
+                </div> 
+                <div class="pl committee anim d2">
+                    <div class="pl-top">
+                        <img src="teamPhoto/NeelP.jpg" alt="Neel Pandya" class="player-photo2">
+                    </div>
+                    <div class="pl-bot">
+                        <h4>Neel Pandya</h4>
+                        <span class="pos">Treasurer</span>
+                    </div>
+                </div> 
+                <div class="pl committee anim d3">
+                    <div class="pl-top">
+                        <!-- <img src="" alt="Harsh Jadawala" class="player-photo"> -->
+                        <div class="photo-placeholder">👤</div>
+                    </div>
+                    <div class="pl-bot">
+                        <h4>Harsh Jadawala</h4>
+                        <span class="pos">Secretary</span>
+                    </div>
+                </div> 
+                <div class="pl committee anim d4">
+                    <div class="pl-top">
+                        <img src="teamPhoto/VivekP.jpg" alt="Vivek Parekh" class="player-photo">
+                    </div>
+                    <div class="pl-bot">
+                        <h4>Vivek Parekh</h4>
+                        <span class="pos">Social Media Manager</span>
+                    </div>
+                </div>  
+                <div class="pl committee anim">
+                    <div class="pl-top">
+                        <img src="teamPhoto/AakashP.jpg" alt="Aakash Parmar" class="player-photo">
+                    </div>
+                    <div class="pl-bot">
+                        <h4>Aakash Parmar</h4>
+                        <span class="pos">Procurement Head</span>
+                    </div>
+                </div>               
+            </div>
 
-<!-- PLAYERS -->
-<div class="team-sub"><h3><span data-lang="en">Players</span><span data-lang="cs">Hráči</span></h3></div>
-<div class="team-grid">
-<div class="pl anim"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Parth Bhalodiya</h4><span class="pos">All Rounder · Captain</span></div></div>
-<div class="pl anim d1"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Hardipsinh Medhat</h4><span class="pos">Batsman · WK</span></div></div>
-<div class="pl anim d2"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Vivek Parekh</h4><span class="pos">Batting All Rounder</span></div></div>
-<div class="pl anim d3"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Aakash Parmar</h4><span class="pos">All Rounder · Vice Captain</span></div></div>
-<div class="pl anim d4"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Harsh Jadawala</h4><span class="pos">Bowling All Rounder</span></div></div>
-<div class="pl anim d5"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Dhrupal Parekh</h4><span class="pos">Batsman</span></div></div>
-<div class="pl anim"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Maulik Senjaliya</h4><span class="pos">Batsman</span></div></div>
-<div class="pl anim d1"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Pritesh Sarvaiya</h4><span class="pos">Bowler</span></div></div>
-<div class="pl anim d2"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Neel Pandya</h4><span class="pos">Batting All Rounder</span></div></div>
-<div class="pl anim d3"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Jaydeepkumar Patel</h4><span class="pos">Batsman</span></div></div>
-<div class="pl anim d4"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Yashkumar Patel</h4><span class="pos">Bowling All Rounder</span></div></div>
-<div class="pl anim d5"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Smit Patel</h4><span class="pos">Batting All Rounder</span></div></div>
-<div class="pl anim"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Dipankumar Patel</h4><span class="pos">Bowling All Rounder</span></div></div>
-<div class="pl anim d1"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Aditya Patel</h4><span class="pos">Batsman</span></div></div>
-<div class="pl anim d2"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Hemal Desai</h4><span class="pos">Batting All Rounder</span></div></div>
-<div class="pl anim d3"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Manjeet Singh</h4><span class="pos">Bowling All Rounder</span></div></div>
-<div class="pl anim d4"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Kishan (PCC)</h4><span class="pos">Bowling All Rounder</span></div></div>
-<div class="pl anim d5"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Rushi Joshi</h4><span class="pos">Batsman</span></div></div>
-<div class="pl anim"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Jigar Mehta</h4><span class="pos">Batsman · WK</span></div></div>
-<div class="pl anim d1"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Niken Khajanchi</h4><span class="pos">Cheer Leader</span></div></div>
-<div class="pl anim d2"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Tanvi Raval</h4><span class="pos">Supporter</span></div></div>
-<div class="pl anim d3"><div class="pl-top"><div class="photo-placeholder">👤</div></div><div class="pl-bot"><h4>Sarjak Bhadeshiya</h4><span class="pos">Lucky Charm</span></div></div>
-<div class="pl rec anim d4"><div class="pl-top"><span class="num" style="color:rgba(255,255,255,.15)">+</span></div><div class="pl-bot"><h4 data-lang="en">Join the Squad</h4><h4 data-lang="cs" style="display:none">Přidej se</h4><span class="pos" data-lang="en">Recruiting!</span><span class="pos" data-lang="cs" style="display:none">Nabíráme!</span></div></div>
-</div>
-</div></section>
+            <!-- PLAYERS -->
+            <div class="team-sub"><h3><span data-lang="en">Players</span><span data-lang="cs">Hráči</span></h3></div>
+            <div class="team-grid">
+                <div class="pl anim">
+                  <div class="pl-top">
+                    <img src="teamPhoto/ParthB.jpg" alt="Parth Bhalodiya" class="player-photo">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Parth Bhalodiya</h4>
+                    <span class="pos">All Rounder · Captain</span>
+                  </div>
+                </div>
+                <div class="pl anim d1">
+                  <div class="pl-top">
+                    <!-- <img src="" alt="Hardipsinh Medhat" class="player-photo"> -->
+                      <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Hardipsinh Medhat</h4>
+                    <span class="pos">Batsman · WK</span>
+                  </div>
+                </div>
+                <div class="pl anim d2">
+                  <div class="pl-top">
+                    <img src="teamPhoto/VivekP.jpg" alt="Vivek Parekh" class="player-photo">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Vivek Parekh</h4>
+                    <span class="pos">Batting All Rounder</span>
+                  </div>
+                </div>  
+                <div class="pl anim d3">
+                  <div class="pl-top">
+                    <img src="teamPhoto/AakashP.jpg" alt="Aakash Parmar" class="player-photo">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Aakash Parmar</h4>
+                    <span class="pos">All Rounder · Vice Captain</span>
+                  </div>
+                </div> 
+                <div class="pl anim d4">
+                  <div class="pl-top">
+                    <!-- <img src="" alt="Harsh Jadawala" class="player-photo"> -->
+                      <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Harsh Jadawala</h4>
+                    <span class="pos">Bowling All Rounder</span>
+                  </div>
+                </div>  
+                <div class="pl anim">
+                  <div class="pl-top">
+                    <!-- <img src="" alt="Dhrupal Parekh" class="player-photo"> -->
+                      <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Dhrupal Parekh</h4>
+                    <span class="pos">Batsman</span>
+                  </div>
+                </div>
+                <div class="pl anim d1">
+                  <div class="pl-top">
+                    <img src="teamPhoto/MaulikS.png" alt="Maulik Senjaliya" class="player-photo2">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Maulik Senjaliya</h4>
+                    <span class="pos">Batsman</span>
+                  </div>
+                </div>            
+				<div class="pl anim d2">
+                  <div class="pl-top">
+                    <img src="teamPhoto/PriteshS.jpg" alt="Pritesh Sarvaiya" class="player-photo">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Pritesh Sarvaiya</h4>
+                    <span class="pos">Bowler</span>
+                  </div>
+                </div>
+                <div class="pl anim d3">
+                  <div class="pl-top">
+                    <img src="teamPhoto/NeelP.jpg" alt="Neel Pandya" class="player-photo2">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Neel Pandya</h4>
+                    <span class="pos">Batting All Rounder</span>
+                  </div>
+                </div>
+                <div class="pl anim d4">
+                  <div class="pl-top">
+                    <img src="teamPhoto/JadeepP.jpg" alt="Jadeep Patel" class="player-photo">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Jadeep Patel</h4>
+                    <span class="pos">Batsman</span>
+                  </div>
+                </div>  
+				<div class="pl anim">
+                  <div class="pl-top">
+                    <img src="teamPhoto/YashP.jpg" alt="Yash Patel" class="player-photo">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Yash Patel</h4>
+                    <span class="pos">Bowling All Rounder</span>
+                  </div>
+                </div>  
+                <div class="pl anim d1">
+                  <div class="pl-top">
+                    <img src="teamPhoto/SmitP.jpg" alt="Smit Patel" class="player-photo2">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Smit Patel</h4>
+                    <span class="pos">Batting All Rounder</span>
+                  </div>
+                </div> 
+                <div class="pl anim d2">
+                  <div class="pl-top">
+                    <img src="teamPhoto/DipanP.jpg" alt="Dipan Patel" class="player-photo">
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Dipan Patel</h4>
+                    <span class="pos">Bowling All Rounder</span>
+                  </div>
+                </div>
+                <div class="pl anim d3">
+                  <div class="pl-top">
+                    <!-- <img src="" alt="Aditya Patel" class="player-photo"> -->
+                      <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Aditya Patel</h4>
+                    <span class="pos">Batsman</span>
+                  </div>
+                </div> 
+                <div class="pl anim d4">
+                  <div class="pl-top">
+                    <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Hemal Desai</h4>
+                    <span class="pos">Batting All Rounder</span>
+                  </div>
+                </div>
+                <div class="pl anim">
+                  <div class="pl-top">
+                    <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Manjeet Singh</h4>
+                    <span class="pos">Bowling All Rounder</span>
+                  </div>
+                </div> 
+                <div class="pl anim d1">
+                  <div class="pl-top">
+                    <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Kishan Pachal</h4>
+                    <span class="pos">Bowling All Rounder</span>
+                  </div>
+                </div>   
+                <div class="pl anim d2">
+                  <div class="pl-top">
+                    <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Rushi Joshi</h4>
+                    <span class="pos">Batsman</span>
+                  </div>
+                </div> 
+                <div class="pl anim d3">
+                  <div class="pl-top">
+                    <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Jigar Mehta</h4>
+                    <span class="pos">Batsman</span>
+                  </div>
+                </div>  
+                <div class="pl anim">
+                  <div class="pl-top">
+                    <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Dhairya Trivedi</h4>
+                    <span class="pos">Bowling All Rounder</span>
+                  </div>
+                </div>
+                <div class="pl anim d4">
+                  <div class="pl-top">
+                    <!-- <img src="" alt="Niken Khajanchi" class="player-photo"> -->
+                      <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Niken Khajanchi</h4>
+                    <span class="pos">Cheer Leader</span>
+                  </div>
+                </div>  
+                <div class="pl anim">
+                  <div class="pl-top">
+                    <div class="photo-placeholder">👤</div>
+                  </div>
+                  <div class="pl-bot">
+                    <h4>Sarjak Bhadeshiya</h4>
+                    <span class="pos">Lucky Charm</span>
+                  </div>
+                </div>  
+                <div class="pl rec anim d1">
+                    <div class="pl-top">
+                        <span class="num" style="color:rgba(255,255,255,.15)">+</span>
+                    </div>
+                    <div class="pl-bot">
+                        <h4 data-lang="en">Join the Squad</h4>
+                        <h4 data-lang="cs" style="display:none">Přidej se</h4>
+                        <span class="pos" data-lang="en">Recruiting!</span>
+                        <span class="pos" data-lang="cs" style="display:none">Nabíráme!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- GALLERY -->
+    <section class="section" id="gallery" style="background:var(--nv2)">
+        <div class="container">
+            <div class="sh c">
+                <div class="accent-bar"></div>
+                <p class="label"><span data-lang="en">Moments</span><span data-lang="cs">Momenty</span></p>
+                <h2 class="heading-lg" data-lang="en">Photo <span>Gallery</span></h2>
+                <h2 class="heading-lg" data-lang="cs" style="display:none">Foto<span>galerie</span></h2>
+            </div>
+            
+            <!-- AUTOMATIC SLIDESHOW -->
+            <div class="gallery-container">
+                <div class="slideshow-frame">
+                    <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                    
+                    <div class="slide active">
+                        <img src="SS_Champions.PNG" alt="Saffron Strikers Champions">
+                        <div class="caption">
+                            <span data-lang="en">🏆 Champions! Division 3 Winners</span>
+                            <span data-lang="cs" style="display:none">🏆 Šampioni! Vítězové 3. Divize</span>
+                        </div>
+                    </div>
+                    <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
 
-<!-- GALLERY -->
-<section class="section" id="gallery" style="background:var(--nv2)"><div class="container">
-<div class="sh c"><div class="accent-bar"></div><p class="label"><span data-lang="en">Moments</span><span data-lang="cs">Momenty</span></p><h2 class="heading-lg" data-lang="en">Photo <span>Gallery</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Foto<span>galerie</span></h2></div>
-<div class="gg" style="grid-template-columns:1fr;grid-auto-rows:auto">
-<div class="gi anim" style="grid-column:auto;grid-row:auto"><img src="SS_Champions.PNG" alt="Saffron Strikers Champions" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-</div>
-<p style="text-align:center;margin-top:20px;font-size:13px;color:var(--g4)" data-lang="en">🏆 Champions! More photos coming soon.</p><p style="text-align:center;margin-top:20px;font-size:13px;color:var(--g4);display:none" data-lang="cs">🏆 Šampioni! Další fotky brzy.</p>
-</div></section>
+                <!-- THUMBNAIL NAV BAR -->
+                <div class="thumbnail-bar">
+                    <img class="thumb active" src="SS_Champions.PNG" onclick="goToSlide(0)" alt="Thumb 1">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- JOIN with Formspree -->
-<section class="section join-s" id="join"><div class="container"><div class="jg">
-<div><div class="sh"><div class="accent-bar" style="background:var(--nv)"></div><p class="label" style="color:var(--nv)"><span data-lang="en">Become a Striker</span><span data-lang="cs">Staň se Strikerem</span></p><h2 class="heading-lg" data-lang="en">Join <span style="color:var(--nv)">Our Team</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Přidej se k <span style="color:var(--nv)">nám</span></h2><p class="sub" style="color:rgba(255,255,255,.85)" data-lang="en">All ages, all backgrounds, all skill levels welcome. Step onto the pitch with us!</p><p class="sub" style="color:rgba(255,255,255,.85);display:none" data-lang="cs">Všechny věky a úrovně vítány!</p></div></div>
-<form class="jf" action="https://formspree.io/f/xykbgvaz" method="POST">
-<input type="text" name="name" placeholder="Full Name / Celé jméno" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="tel" name="phone" placeholder="Phone / Telefon">
-<select name="experience" required><option value="" disabled selected>Experience / Zkušenosti</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>Professional</option></select>
-<textarea name="message" placeholder="About you / O tobě"></textarea>
-<input type="hidden" name="_subject" value="New Saffron Strikers Membership Application">
-<button type="submit" class="btn btn-dk" style="width:100%;justify-content:center"><span data-lang="en">Submit Application</span><span data-lang="cs">Odeslat přihlášku</span></button>
-</form></div></div></section>
+    <!-- JOIN with Formspree -->
+    <section class="section join-s" id="join">
+        <div class="container">
+            <div class="jg">
+                <div>
+                    <div class="sh">
+                        <div class="accent-bar" style="background:var(--nv)"></div>
+                        <p class="label" style="color:var(--nv)"><span data-lang="en">Become a Striker</span><span data-lang="cs">Staň se Strikerem</span></p>
+                        <h2 class="heading-lg" data-lang="en">Join <span style="color:var(--nv)">Our Team</span></h2>
+                        <h2 class="heading-lg" data-lang="cs" style="display:none">Přidej se k <span style="color:var(--nv)">nám</span></h2>
+                        <p class="sub" style="color:rgba(255,255,255,.85)" data-lang="en">All ages, all backgrounds, all skill levels welcome. Step onto the pitch with us!</p>
+                        <p class="sub" style="color:rgba(255,255,255,.85);display:none" data-lang="cs">Všechny věky a úrovně vítány!</p>
+                    </div>
+                </div>
+                <form class="jf" action="https://formspree.io/f/xykbgvaz" method="POST">
+                    <input type="text" name="name" placeholder="Full Name / Celé jméno" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone / Telefon">
+                    <select name="experience" required>
+                        <option value="" disabled selected>Experience / Zkušenosti</option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                        <option>Professional</option>
+                    </select>
+                    <textarea name="message" placeholder="About you / O tobě"></textarea>
+                    <input type="hidden" name="_subject" value="New Saffron Strikers Membership Application">
+                    <button type="submit" class="btn btn-dk" style="width:100%;justify-content:center"><span data-lang="en">Submit Application</span><span data-lang="cs">Odeslat přihlášku</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<!-- CONTACT with Formspree -->
-<section class="section" id="contact" style="background:var(--nv)"><div class="container"><div class="cg">
-<div><div class="sh"><div class="accent-bar"></div><p class="label"><span data-lang="en">Get in Touch</span><span data-lang="cs">Kontakt</span></p><h2 class="heading-lg" data-lang="en">Contact <span>Us</span></h2><h2 class="heading-lg" data-lang="cs" style="display:none">Kontaktujte <span>nás</span></h2></div>
-<ul class="cl">
-<li class="ci"><div class="cico">📍</div><div><h4 data-lang="en">Address</h4><h4 data-lang="cs" style="display:none">Adresa</h4><p>Polerady 332/2, 250 63<br>Czech Republic</p></div></li>
-<li class="ci"><div class="cico">🌐</div><div><h4>Website</h4><a href="https://saffronstrikers.cz">saffronstrikers.cz</a></div></li>
-<li class="ci"><div class="cico">📱</div><div><h4 data-lang="en">Follow Us</h4><h4 data-lang="cs" style="display:none">Sledujte nás</h4><p>Instagram & Facebook</p></div></li>
-</ul>
-<div class="sr"><a href="https://www.instagram.com/saffron.strikers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="sl" title="Instagram"><img src="Insta_logo.png" alt="Instagram"></a><a href="https://www.facebook.com/profile.php?id=61586220806446" target="_blank" class="sl" title="Facebook"><img src="FB_logo.png" alt="Facebook"></a></div>
-</div>
-<form class="cf" action="https://formspree.io/f/xykbgvaz" method="POST">
-<input type="text" name="name" placeholder="Name / Jméno" required><input type="email" name="email" placeholder="Email" required><input type="text" name="subject" placeholder="Subject / Předmět">
-<textarea name="message" placeholder="Message / Zpráva" required></textarea>
-<input type="hidden" name="_subject" value="Saffron Strikers Website Contact">
-<button type="submit" class="btn btn-sf" style="width:100%;justify-content:center"><span data-lang="en">Send Message</span><span data-lang="cs">Odeslat zprávu</span></button>
-</form></div></div></section>
+    <!-- CONTACT with Formspree -->
+    <section class="section" id="contact" style="background:var(--nv)">
+        <div class="container">
+            <div class="cg">
+                <div>
+                    <div class="sh">
+                        <div class="accent-bar"></div>
+                        <p class="label"><span data-lang="en">Get in Touch</span><span data-lang="cs">Kontakt</span></p>
+                        <h2 class="heading-lg" data-lang="en">Contact <span>Us</span></h2>
+                        <h2 class="heading-lg" data-lang="cs" style="display:none">Kontaktujte <span>nás</span></h2>
+                    </div>
+                    <ul class="cl">
+                        <li class="ci">
+                            <div class="cico">📍</div>
+                            <div>
+                                <h4 data-lang="en">Address</h4>
+                                <h4 data-lang="cs" style="display:none">Adresa</h4>
+                                <p>Polerady 332/2, 250 63<br>Czech Republic</p>
+                            </div>
+                        </li>
+                        <li class="ci">
+                            <div class="cico">🌐</div>
+                            <div>
+                                <h4>Website</h4>
+                                <a href="https://saffronstrikers.cz">saffronstrikers.cz</a>
+                            </div>
+                        </li>
+                        <li class="ci">
+                            <div class="cico">📱</div>
+                            <div>
+                                <h4 data-lang="en">Follow Us</h4>
+                                <h4 data-lang="cs" style="display:none">Sledujte nás</h4>
+                                <p>Instagram & Facebook</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="sr">
+                        <a href="https://www.instagram.com/saffron.strikers?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="sl" title="Instagram"><img src="Insta_logo.png" alt="Instagram"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61586220806446" target="_blank" class="sl" title="Facebook"><img src="FB_logo.png" alt="Facebook"></a>
+                    </div>
+                </div>
+                <form class="cf" action="https://formspree.io/f/xykbgvaz" method="POST">
+                    <input type="text" name="name" placeholder="Name / Jméno" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="subject" placeholder="Subject / Předmět">
+                    <textarea name="message" placeholder="Message / Zpráva" required></textarea>
+                    <input type="hidden" name="_subject" value="Saffron Strikers Website Contact">
+                    <button type="submit" class="btn btn-sf" style="width:100%;justify-content:center"><span data-lang="en">Send Message</span><span data-lang="cs">Odeslat zprávu</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<div class="spb"><div class="container"><p class="label" style="text-align:center;margin-bottom:24px"><span data-lang="en">Our Partners</span><span data-lang="cs">Partneři</span></p><div class="spf"><div class="sp">🐋 WhaleTank</div><div class="sp">✨ Mystara</div><div class="sp">🏅 VP1 Sports</div></div></div></div>
+    <div class="spb">
+        <div class="container">
+            <p class="label" style="text-align:center;margin-bottom:24px"><span data-lang="en">Our Partners</span><span data-lang="cs">Partneři</span></p>
+            <div class="spf">
+                <div class="sp">🐋 WhaleTank</div>
+                <div class="sp">✨ Mystara</div>
+                <div class="sp">🏅 VP1 Sports</div>
+            </div>
+        </div>
+    </div>
 
-<footer class="footer"><div class="container">
-<div class="fb2"><img src="SSSC_logo.jpeg" alt="SSSC"><span>Saffron Strikers, z.s.</span></div>
-<p class="fc2">&copy; 2025-2026 Saffron Strikers Sports Club</p>
-<ul class="fn"><li><a href="#home">Home</a></li><li><a href="#fixtures">Fixtures</a></li><li><a href="#contact">Contact</a></li></ul>
-</div>
-<div style="background:#030509;padding:12px 0;border-top:1px solid rgba(255,255,255,.04)">
-<p style="text-align:center;font-size:11px;color:#3a3e55;line-height:1.7">
-Saffron Strikers Sports Club, z.s. &nbsp;|&nbsp; Registered Nonprofit Association — Czech Republic &nbsp;|&nbsp; Registration No. Fj: 516497/25 &nbsp;|&nbsp; Registered under Czech Civil Code §214, Act No. 89/2012 Sb. &nbsp;|&nbsp; Headquarters: Polerady 332/2, 250 63, Czech Republic<br>
-The domain <strong style="color:#4a4e6a">saffronstrikers.cz</strong> is the sole official and primary domain of Saffron Strikers Sports Club, z.s. &nbsp;|&nbsp; Admin contact: itamanager@saffronstrikers.cz
-</p>
-</div>
-</footer>
-
-<script>
-function setLang(l){document.body.classList.toggle('cs',l==='cs');document.querySelectorAll('.lang-sw button').forEach(b=>b.classList.toggle('on',b.textContent.trim()===(l==='cs'?'CZ':'EN')));try{localStorage.setItem('ss-l',l)}catch(e){}}
-try{const s=localStorage.getItem('ss-l');if(s)setLang(s)}catch(e){}
-window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>50)});
-document.querySelectorAll('.nav-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navMenu').classList.remove('open')));
-const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.anim').forEach(el=>obs.observe(el));
-function showM(m,btn){document.querySelectorAll('.tp').forEach(p=>p.classList.remove('on'));document.querySelectorAll('.tb').forEach(b=>b.classList.remove('on'));document.getElementById('p-'+m).classList.add('on');btn.classList.add('on')}
-window.addEventListener('scroll',()=>{let c='';document.querySelectorAll('section[id]').forEach(s=>{if(window.pageYOffset>=s.offsetTop-120)c=s.id});document.querySelectorAll('.nav-menu a[href^="#"]').forEach(a=>{a.classList.toggle('active',a.getAttribute('href')==='#'+c)})});
-</script>
+    <footer class="footer">
+        <div class="container">
+            <div class="fb2"><img src="SSSC_logo.jpeg" alt="SSSC"><span>Saffron Strikers, z.s.</span></div>
+            <p class="fc2">&copy; 2025-2026 Saffron Strikers Sports Club</p>
+            <ul class="fn">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fixtures">Fixtures</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div style="background:#030509;padding:12px 0;border-top:1px solid rgba(255,255,255,.04)">
+            <p style="text-align:center;font-size:11px;color:#3a3e55;line-height:1.7">
+                Saffron Strikers Sports Club, z.s. &nbsp;|&nbsp; Registered Nonprofit Association — Czech Republic &nbsp;|&nbsp; Registration No. Fj: 516497/25 &nbsp;|&nbsp; Registered under Czech Civil Code §214, Act No. 89/2012 Sb. &nbsp;|&nbsp; Headquarters: Polerady 332/2, 250 63, Czech Republic<br>
+                The domain <strong style="color:#4a4e6a">saffronstrikers.cz</strong> is the sole official and primary domain of Saffron Strikers Sports Club, z.s. &nbsp;|&nbsp; Admin contact: itamanager@saffronstrikers.cz
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
