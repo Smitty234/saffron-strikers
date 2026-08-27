@@ -785,9 +785,12 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .pl {
     background: linear-gradient(180deg, var(--nv3) 0%, var(--nv2) 100%);
     border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 6px;
     overflow: hidden;
-    transition: all .4s;
-    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+    transition: all .4s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .pl:hover {
@@ -797,29 +800,28 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 }
 
 .pl-top {
-    height: 320px;
+    width: 100%;
+    height: 300px;
     background: #0a0e1a; 
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .pl-top .player-photo {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.pl-top .player-photo2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%; 
-    transition: transform 0.4s ease; 
+    object-position: top center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    transition: transform .4s ease;
 }
 
-.pl:hover .player-photo
-.pl:hover .player-photo2 {
+.pl:hover .player-photo {
     transform: scale(1.05);
 }
 
@@ -1191,6 +1193,9 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     .fc { grid-template-columns: 1fr; }
     .fd { text-align: left; }
     .fm { flex-wrap: wrap; }
+    .pl-top {
+        height: 240px;
+    }
 }
 
 /* Gallery Container & Border Setup */
@@ -1227,7 +1232,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center 20%;
     filter: brightness(1.18) contrast(1.12) saturate(1.15);
     image-rendering: -webkit-optimize-contrast;

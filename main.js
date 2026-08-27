@@ -58,7 +58,7 @@ window.addEventListener('scroll', () => {
 // Photo Gallery Slide //
 let currentSlide = 0;
 let autoSlideTimer = null;
-const intervalTime = 2000; // Rotates every 3.5 seconds
+const intervalTime = 3000; // Rotates every 3.5 seconds
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
