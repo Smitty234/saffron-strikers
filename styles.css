@@ -97,6 +97,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 }
 
 .btn-sf {
+    height: 50px;
     background: var(--sf);
     color: var(--wh);
 }
@@ -487,9 +488,31 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     position: relative;
 }
 
-.sh { margin-bottom: 40px; }
-.sh.c { text-align: center; }
-.sh.c .accent-bar { margin: 0 auto 16px; }
+.sh { 
+    margin-bottom: 40px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sh h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.sh p {
+    display: block;
+    width: 100%;
+}
+
+.sh.c { 
+    text-align: center; 
+}
+
+.sh.c .accent-bar { 
+    margin: 0 auto 16px; 
+}
 
 .about-grid {
     display: grid;

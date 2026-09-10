@@ -25,6 +25,8 @@
     <script src="scripts/matches2026.js" defer></script>
     <script src="scripts/scorecard.js" defer></script>
     <script src="scripts/statistics.js" defer></script>
+    <script src="scripts/translations.js" defer></script>
+    <script src="scripts/langswitcher.js" defer></script>
 
 </head>
 <body>
@@ -35,22 +37,20 @@
                 <div class="nav-brand-text">Saffron Strikers<small>Sports Club, z.s.</small></div>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home"><span data-lang="en">Home</span><span data-lang="cs">Domů</span></a></li>
-                <li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>                
-                <li><a href="#fixtures"><span data-lang="en">Fixtures</span><span data-lang="cs">Zápasy</span></a></li>
-                <li><a href="#training"><span data-lang="en">Training</span><span data-lang="cs">Tréninky</span></a></li>
-                <li><a href="#team"><span data-lang="en">Squad</span><span data-lang="cs">Tým</span></a></li>
-                <li><a href="#gallery"><span data-lang="en">Gallery</span><span data-lang="cs">Galerie</span></a></li>
-                <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="cs">Kontakt</span></a></li>
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>                
+                <li><a href="#fixtures" data-i18n="nav_fixtures">Fixtures</a></li>
+                <li><a href="#training" data-i18n="nav_training">Training</a></li>
+                <li><a href="#team" data-i18n="nav_team">Squad</a></li>
+                <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
             </ul>
             <div class="nav-cta">
                 <div class="lang-sw">
-                    <button class="on" onclick="setLang('en')">EN</button>
-                    <button onclick="setLang('cs')">CZ</button>
+                    <button class="on" onclick="setLanguage('en')">EN</button>
+                    <button onclick="setLanguage('cs')">CZ</button>
                 </div>
-                <a href="#join" class="btn btn-sf">
-                    <span data-lang="en">Join Us</span><span data-lang="cs">Přidej se</span>
-                </a>
+                <a href="#join" class="btn btn-sf" data-i18n="nav_join">Join Us</a>
             </div>
             <button class="burger" onclick="document.getElementById('navMenu').classList.toggle('open')">
                 <span></span><span></span><span></span>
@@ -63,41 +63,43 @@
         <div class="hero-diag"></div>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-label">
-                    <span data-lang="en">CMKS T20 League — Division 3</span>
-                    <span data-lang="cs">CMKS T20 liga — Divize 3</span>
-                </div>
-                <h1 data-lang="en"><span class="ac">Saffron</span> Strikers</h1>
-                <h1 data-lang="cs" style="display:none"><span class="ac">Saffron</span> Strikers</h1>
-                <p class="hero-tag">Forged in Courage. United in Spirit.</p>
-                <p class="hero-desc" data-lang="en">Prague's fiercest cricket club — competing in the Czech T20 league, promoting cricket culture, and building community across the Czech Republic.</p>
-                <p class="hero-desc" data-lang="cs" style="display:none">Nejodvážnější kriketový klub v Praze — soutěžíme v české T20 lize, šíříme kriketovou kulturu a budujeme komunitu.</p>
+                <div class="hero-label" data-i18n="hero_label">🏆 CMKS T20 League — Division 3 Champions</div>
+                
+                <h1>
+                    <span class="ac" data-i18n="hero_title_ac">Saffron</span> 
+                    <span data-i18n="hero_title_main">Strikers</span>
+                </h1>
+                
+                <p class="hero-tag" data-i18n="hero_motto">Forged in Courage. United in Spirit.</p>
+                <p class="hero-desc" data-i18n="hero_desc">Prague's fiercest cricket club — reigning Czech T20 league champions, promoting cricket culture, and building community across the Czech Republic.</p>
+                
                 <div class="hero-actions">
-                    <a href="#join" class="btn btn-sf"><span data-lang="en">Join the Club</span><span data-lang="cs">Vstup do klubu</span></a>
-                    <a href="#fixtures" class="btn btn-ol"><span data-lang="en">View Fixtures</span><span data-lang="cs">Zobrazit zápasy</span></a>
+                    <a href="#join" class="btn btn-sf" data-i18n="btn_join">Join the Club</a>
+                    <a href="#fixtures" class="btn btn-ol" data-i18n="btn_fixtures">View Fixtures</a>
                 </div>
             </div>
+            
             <div class="hero-vis">
                 <div class="logo-wrap">
                     <div class="logo-ring"></div>
                     <div class="logo-ring"></div>
                     <div class="logo-glow"></div>
-                    <img src="SSSC_logo.jpeg" alt="Logo">
+                    <img src="SSSC_logo.jpeg" alt="Saffron Strikers Logo">
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="ticker">
+   <div class="ticker">
         <div class="ticker-inner">
-            <div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
-            <div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
-            <div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
-            <div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
-            <div class="ticker-item"><span class="dot"></span>CMKS T20 League Division 3 — Season 2026</div>
-            <div class="ticker-item"><span class="dot"></span>Next: Vinohrady Portos vs Saffron Strikers — May 3</div>
-            <div class="ticker-item"><span class="dot"></span>Nets Training Every Week — Join Us!</div>
-            <div class="ticker-item"><span class="dot"></span>Forged in Courage. United in Spirit.</div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_champions">🏆 CMKS T20 League — Division 3 Champions</span></div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_next_match">Next Match: Season 2027 Coming Soon</span></div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_recruitment">Squad Recruitment Open — Join Us!</span></div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_motto">Forged in Courage. United in Spirit.</span></div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_champions">🏆 CMKS T20 League — Division 3 Champions</span></div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_next_match">Next Match: Season 2027 Coming Soon</span></div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_recruitment">Squad Recruitment Open — Join Us!</span></div>
+            <div class="ticker-item"><span class="dot"></span><span data-i18n="ticker_motto">Forged in Courage. United in Spirit.</span></div>
         </div>
     </div>
 
@@ -107,56 +109,44 @@
             <div class="about-grid">
                 <div class="anim">
                     <div class="about-card">
-                        <h3 data-lang="en">Our Mission</h3>
-                        <h3 data-lang="cs" style="display:none">Naše mise</h3>
-                        <p data-lang="en">Saffron Strikers Sports Club is a voluntary cricket association founded to unite people through playing, promoting, and developing cricket in the Czech Republic. We champion healthy lifestyles, cultural exchange, community cohesion and social inclusion.</p>
-                        <p data-lang="cs" style="display:none">Saffron Strikers Sports Club je dobrovolný kriketový spolek založený za účelem spojování lidí prostřednictvím hraní, propagace a rozvoje kriketu v ČR.</p>
+                        <h3 data-i18n="mission_title">Our Mission</h3>
+                        <p data-i18n="mission_body">Saffron Strikers Sports Club is a voluntary cricket association founded to unite people through playing, promoting, and developing cricket in the Czech Republic. We champion healthy lifestyles, cultural exchange, community cohesion and social inclusion.</p>
                         <span class="bg-ico">🏏</span>
                     </div>
                 </div>
                 <div>
                     <div class="sh">
                         <div class="accent-bar"></div>
-                        <p class="label"><span data-lang="en">About Us</span><span data-lang="cs">O nás</span></p>
-                        <h2 class="heading-lg" data-lang="en">More Than Just <span>Cricket</span></h2>
-                        <h2 class="heading-lg" data-lang="cs" style="display:none">Víc než jen <span>kriket</span></h2>
-                        <p class="sub" data-lang="en">Founded December 14, 2025, in Prague. Registered non-profit (z.s.). Competing in CMKS T20 League Division 3 in our debut season 2026.</p>
-                        <p class="sub" data-lang="cs" style="display:none">Založen 14. prosince 2025 v Praze. Registrovaný neziskový spolek. Soutěžíme v CMKS T20 lize, divize 3.</p>
+                        <p class="label" data-i18n="about_label">About Us</p>
+                        <h2 class="heading-lg"><span data-i18n="about_heading">More Than Just</span> <span class="ac" data-i18n="about_heading_accent">Cricket</span></h2>
+                        <p class="sub" data-i18n="about_sub">Founded December 14, 2025, in Prague. Registered non-profit (z.s.). Official ČMKS T20 Division 3 Champions.</p>
                     </div>
                     <div class="af-grid">
                         <div class="af anim">
-                            <span class="ico">🏟️</span>
-                            <h4 data-lang="en">Training & Matches</h4>
-                            <h4 data-lang="cs" style="display:none">Tréninky a zápasy</h4>
-                            <p data-lang="en">Weekly nets + competitive league</p>
-                            <p data-lang="cs" style="display:none">Týdenní tréninky + soutěžní liga</p>
+                            <span class="ico">🏆</span>
+                            <h4 data-i18n="af_champions_title">Champions</h4>
+                            <p data-i18n="af_champions_desc">ČMKS T20 Division 3 Winners</p>
                         </div>
                         <div class="af anim d1">
-                            <span class="ico">🌍</span>
-                            <h4 data-lang="en">International</h4>
-                            <h4 data-lang="cs" style="display:none">Mezinárodní</h4>
-                            <p data-lang="en">CMKS and ECC tournaments + Foreign tours</p>
-                            <p data-lang="cs" style="display:none">Turnaje CMKS a ECC + zahraniční turnaje</p>
+                            <span class="ico">🏟️</span>
+                            <h4 data-i18n="af_training_title">Training & Matches</h4>
+                            <p data-i18n="af_training_desc">Weekly nets + competitive league</p>
                         </div>
                         <div class="af anim d2">
-                            <span class="ico">🤝</span>
-                            <h4 data-lang="en">Community</h4>
-                            <h4 data-lang="cs" style="display:none">Komunita</h4>
-                            <p data-lang="en">Cultural exchange & inclusion</p>
-                            <p data-lang="cs" style="display:none">Kulturní výměna a začleňování</p>
+                            <span class="ico">🌍</span>
+                            <h4 data-i18n="af_intl_title">International</h4>
+                            <p data-i18n="af_intl_desc">CMKS and ECC tournaments + Tours</p>
                         </div>
                         <div class="af anim d3">
-                            <span class="ico">🎓</span>
-                            <h4 data-lang="en">All Levels</h4>
-                            <h4 data-lang="cs" style="display:none">Všechny úrovně</h4>
-                            <p data-lang="en">Admission to people of all ages</p>
-                            <p data-lang="cs" style="display:none">Přijímáme lidi všech věkových kategorií</p>
+                            <span class="ico">🤝</span>
+                            <h4 data-i18n="af_community_title">Community</h4>
+                            <p data-i18n="af_community_desc">Cultural exchange & social inclusion</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>   
 
     <!-- FIXTURES --> 
     <section class="section" id="fixtures" style="background:var(--nv)">
@@ -167,8 +157,10 @@
                     <span data-lang="en" id="labelEn-fixtures"></span>
                     <span data-lang="cs" id="labelCs-fixtures"></span>
                 </p>
-                <h2 class="heading-lg" data-lang="en">Season <span>Fixtures</span></h2>
-                <h2 class="heading-lg" data-lang="cs" style="display:none">Sezónní <span>zápasy</span></h2>
+                <h2 class="heading-lg">
+                    <span data-i18n="fixtures_title">Season</span> 
+                    <span class="ac" data-i18n="fixtures_title_accent">Fixtures</span>
+                </h2>
             </div>
 
             <!-- Season Year Tabs -->
@@ -197,11 +189,9 @@
         <div class="container">
             <div class="sh c">
                 <div class="accent-bar"></div>
-                <p class="label"><span data-lang="en">Nets Schedule</span><span data-lang="cs">Rozvrh tréninků</span></p>
-                <h2 class="heading-lg" data-lang="en">Training <span>Sessions</span></h2>
-                <h2 class="heading-lg" data-lang="cs" style="display:none">Tréninkové <span>jednotky</span></h2>
-                <p class="sub" style="margin:12px auto 0" data-lang="en">Weekly nets at Vinor Cricket Ground. All members welcome.</p>
-                <p class="sub" style="margin:12px auto 0;display:none" data-lang="cs">Týdenní tréninky na hřišti Vinor.</p>
+                <p class="label" data-i18n="training_label">Nets Schedule</p>
+                <h2 class="heading-lg"><span data-i18n="training_title">Training</span> <span class="ac" data-i18n="training_title_accent">Sessions</span></h2>
+                <p class="sub" style="margin:12px auto 0" data-i18n="training_sub">Weekly nets at Vinor Cricket Ground. All members welcome.</p>
             </div>
             <div class="tabs">
                 <button class="tb on" onclick="showM('apr',this)">Apr</button>
@@ -259,13 +249,15 @@
         <div class="container">
             <div class="sh c">
                 <div class="accent-bar"></div>
-                <p class="label"><span data-lang="en">The Squad</span><span data-lang="cs">Sestava</span></p>
-                <h2 class="heading-lg" data-lang="en">Meet The <span>Team</span></h2>
-                <h2 class="heading-lg" data-lang="cs" style="display:none">Poznej <span>tým</span></h2>
+                <p class="label" data-i18n="squad_label">The Squad</p>
+                <h2 class="heading-lg">
+                    <span data-i18n="squad_title">Meet The</span> 
+                    <span class="ac" data-i18n="squad_title_accent">Team</span>
+                </h2>
             </div>
 
             <!-- COMMITTEE -->
-            <div class="team-sub"><h3><span data-lang="en">Committee</span><span data-lang="cs">Výbor</span></h3></div>
+            <div class="team-sub"><h3 data-i18n="squad_committee">Committee</h3></div>
             <div class="team-grid">
                 <div class="pl committee anim">
                     <div class="pl-top">
@@ -324,7 +316,7 @@
             </div>
 
             <!-- PLAYERS -->
-            <div class="team-sub"><h3><span data-lang="en">Players</span><span data-lang="cs">Hráči</span></h3></div>
+            <div class="team-sub"><h3 data-i18n="squad_players">Players</h3></div>
             <div class="team-grid">
                 <div class="pl anim" data-player-id="9598060" onclick="openPlayerStats('9598060')" style="cursor: pointer;">
                   <div class="pl-top">
@@ -455,7 +447,7 @@
                 </div> 
                 <div class="pl anim d4" data-player-id="7559148" onclick="openPlayerStats('7559148')" style="cursor: pointer;">
                   <div class="pl-top">
-                    <div class="photo-placeholder">👤</div>
+                    <img src="teamPhoto/HemalD.jpeg" alt="Hemal Desai" class="player-photo">
                   </div>
                   <div class="pl-bot">
                     <h4>Hemal Desai</h4>
@@ -563,61 +555,43 @@
         <div class="container">
             <div class="sh c">
                 <div class="accent-bar"></div>
-                <p class="label"><span data-lang="en">Moments</span><span data-lang="cs">Momenty</span></p>
-                <h2 class="heading-lg" data-lang="en">Photo <span>Gallery</span></h2>
-                <h2 class="heading-lg" data-lang="cs" style="display:none">Foto<span>galerie</span></h2>
+                <p class="label" data-i18n="gallery_label">Moments</p>
+                <h2 class="heading-lg"><span data-i18n="gallery_title">Photo</span> <span class="ac" data-i18n="gallery_title_accent">Gallery</span></h2>
             </div>
             
-            <!-- AUTOMATIC SLIDESHOW -->
             <div class="gallery-container">
                 <div class="slideshow-frame">
                     <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
                     
                     <div class="slide active">
                         <img src="teamPhoto/SS_Champions.PNG" alt="Saffron Strikers Champions">
-                        <div class="caption">
-                            <span data-lang="en">🏆 Challenger Cup Champions! 2025</span>
-                            <span data-lang="cs" style="display:none">🏆 Šampioni! 2025</span>
-                        </div>
+                        <div class="caption"><span data-i18n="gallery_cap_1">🏆 Challenger Cup Champions! 2025</span></div>
                     </div>
                     <div class="slide active">
                         <img src="teamPhoto/IndependenceCup2601.jpg" alt="Saffron Strikers Champions">
                     </div>
                     <div class="slide active">
                         <img src="teamPhoto/IndependenceCup2602.jpg" alt="Saffron Strikers Champions">
-                        <div class="caption">
-                            <span data-lang="en">🏆 Indepedence Cup! 2026</span>
-                            <span data-lang="cs" style="display:none">🏆 Pohár nezávislosti! 2026</span>
-                        </div>
+                        <div class="caption"><span data-i18n="gallery_cap_2">🏆 Independence Cup! 2026</span></div>
                     </div>
                     <div class="slide active">
                         <img src="teamPhoto/IndependenceCup2603.jpg" alt="Saffron Strikers Champions">
-                        <div class="caption">
-                            <span data-lang="en">🏆 Indepedence Cup! 2026</span>
-                            <span data-lang="cs" style="display:none">🏆 Pohár nezávislosti! 2026</span>
-                        </div>
+                        <div class="caption"><span data-i18n="gallery_cap_2">🏆 Independence Cup! 2026</span></div>
                     </div>
                     <div class="slide active">
                         <img src="teamPhoto/BB2026.JPG" alt="Saffron Strikers Champions">
                     </div>
                     <div class="slide active">
                         <img src="teamPhoto/Divison3win_2026_01.JPG" alt="Saffron Strikers Champions">
-                        <div class="caption">
-                            <span data-lang="en">🏆 Champion of Division 3! 2026</span>
-                            <span data-lang="cs" style="display:none">🏆 Šampion 3. divize 2026!</span>
-                        </div>
+                        <div class="caption"><span data-i18n="gallery_cap_3">🏆 Champion of Division 3! 2026</span></div>
                     </div>
                     <div class="slide active">
                         <img src="teamPhoto/Divison3win_2026_02.jpg" alt="Saffron Strikers Champions">
-                        <div class="caption">
-                            <span data-lang="en">🏆 Champion of Division 3! 2026</span>
-                            <span data-lang="cs" style="display:none">🏆 Šampion 3. divize 2026!</span>
-                        </div>
+                        <div class="caption"><span data-i18n="gallery_cap_3">🏆 Champion of Division 3! 2026</span></div>
                     </div>
                     <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
                 </div>
 
-                <!-- THUMBNAIL NAV BAR -->
                 <div class="thumbnail-bar">
                     <img class="thumb active" src="teamPhoto/SS_Champions.PNG" onclick="goToSlide(0)" alt="Thumb 1">
                     <img class="thumb active" src="teamPhoto/IndependenceCup2601.jpg" onclick="goToSlide(1)" alt="Thumb 2">
@@ -638,11 +612,12 @@
                 <div>
                     <div class="sh">
                         <div class="accent-bar" style="background:var(--nv)"></div>
-                        <p class="label" style="color:var(--nv)"><span data-lang="en">Become a Striker</span><span data-lang="cs">Staň se Strikerem</span></p>
-                        <h2 class="heading-lg" data-lang="en">Join <span style="color:var(--nv)">Our Team</span></h2>
-                        <h2 class="heading-lg" data-lang="cs" style="display:none">Přidej se k <span style="color:var(--nv)">nám</span></h2>
-                        <p class="sub" style="color:rgba(255,255,255,.85)" data-lang="en">All ages, all backgrounds, all skill levels welcome. Step onto the pitch with us!</p>
-                        <p class="sub" style="color:rgba(255,255,255,.85);display:none" data-lang="cs">Všechny věky a úrovně vítány!</p>
+                        <p class="label" style="color:var(--nv)" data-i18n="join_label">Become a Striker</p>
+                        <h2 class="heading-lg">
+                            <span style="color:rgba(255,255,255,.85);" data-i18n="join_title">Join</span>
+                            <span style="color:var(--nv)" data-i18n="join_title_accent">Our Team</span>
+                        </h2>
+                        <p class="sub" style="color:rgba(255,255,255,.85)" data-i18n="join_sub">All ages, all backgrounds, all skill levels welcome. Step onto the pitch with us!</p>
                     </div>
                 </div>
                 <form class="jf" action="https://formspree.io/f/xykbgvaz" method="POST">
@@ -671,16 +646,17 @@
                 <div>
                     <div class="sh">
                         <div class="accent-bar"></div>
-                        <p class="label"><span data-lang="en">Get in Touch</span><span data-lang="cs">Kontakt</span></p>
-                        <h2 class="heading-lg" data-lang="en">Contact <span>Us</span></h2>
-                        <h2 class="heading-lg" data-lang="cs" style="display:none">Kontaktujte <span>nás</span></h2>
+                        <p class="label" data-i18n="contact_label">Get in Touch</p>
+                        <h2 class="heading-lg">
+                            <span data-i18n="contact_title">Contact</span> 
+                            <span class="ac" data-i18n="contact_title_accent">Us</span>
+                        </h2>
                     </div>
                     <ul class="cl">
                         <li class="ci">
                             <div class="cico">📍</div>
                             <div>
-                                <h4 data-lang="en">Address</h4>
-                                <h4 data-lang="cs" style="display:none">Adresa</h4>
+                                <h4 data-i18n="contact_address">Address</h4>
                                 <p>Polerady 332/2, 250 63<br>Czech Republic</p>
                             </div>
                         </li>
@@ -694,8 +670,7 @@
                         <li class="ci">
                             <div class="cico">📱</div>
                             <div>
-                                <h4 data-lang="en">Follow Us</h4>
-                                <h4 data-lang="cs" style="display:none">Sledujte nás</h4>
+                                <h4 data-i18n="contact_follow">Follow Us</h4>
                                 <p>Instagram & Facebook</p>
                             </div>
                         </li>
@@ -719,7 +694,7 @@
 
     <div class="spb">
         <div class="container">
-            <p class="label" style="text-align:center;margin-bottom:24px"><span data-lang="en">Our Partners</span><span data-lang="cs">Partneři</span></p>
+            <p class="label" style="text-align:center;margin-bottom:24px" data-i18n="partners_label">Our Partners</p>
             <div class="spf">
                 <div class="sp">🐋 WhaleTank</div>
                 <div class="sp">✨ Mystara</div>
@@ -733,9 +708,9 @@
             <div class="fb2"><img src="SSSC_logo.jpeg" alt="SSSC"><span>Saffron Strikers, z.s.</span></div>
             <p class="fc2">&copy; 2025-2026 Saffron Strikers Sports Club</p>
             <ul class="fn">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#fixtures">Fixtures</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#fixtures" data-i18n="nav_fixtures">Fixtures</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
             </ul>
         </div>
         <div style="background:#030509;padding:12px 0;border-top:1px solid rgba(255,255,255,.04)">
