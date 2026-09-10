@@ -21,7 +21,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Mobile Navigation Close on Click
-document.querySelectorAll('.nav-menu a').forEach(a => {
+document.querySelectorAll('.nav-menu a').forEach(a => {   
     a.addEventListener('click', () => document.getElementById('navMenu').classList.remove('open'));
 });
 
@@ -114,7 +114,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     startTimer();
 });
-
-
-
-

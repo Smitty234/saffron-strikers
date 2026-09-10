@@ -22,6 +22,10 @@
     
     <!-- External JS -->
     <script src="main.js" defer></script>
+    <script src="scripts/matches2026.js" defer></script>
+    <script src="scripts/scorecard.js" defer></script>
+    <script src="scripts/statistics.js" defer></script>
+
 </head>
 <body>
     <nav class="nav" id="mainNav">
@@ -32,7 +36,7 @@
             </a>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home"><span data-lang="en">Home</span><span data-lang="cs">Domů</span></a></li>
-                <li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>
+                <li><a href="#about"><span data-lang="en">About</span><span data-lang="cs">O nás</span></a></li>                
                 <li><a href="#fixtures"><span data-lang="en">Fixtures</span><span data-lang="cs">Zápasy</span></a></li>
                 <li><a href="#training"><span data-lang="en">Training</span><span data-lang="cs">Tréninky</span></a></li>
                 <li><a href="#team"><span data-lang="en">Squad</span><span data-lang="cs">Tým</span></a></li>
@@ -44,7 +48,7 @@
                     <button class="on" onclick="setLang('en')">EN</button>
                     <button onclick="setLang('cs')">CZ</button>
                 </div>
-                <a href="#join" class="btn btn-sf" style="padding:10px 24px;font-size:12px">
+                <a href="#join" class="btn btn-sf">
                     <span data-lang="en">Join Us</span><span data-lang="cs">Přidej se</span>
                 </a>
             </div>
@@ -154,176 +158,39 @@
         </div>
     </section>    
 
-    <!-- FIXTURES -->
+    <!-- FIXTURES --> 
     <section class="section" id="fixtures" style="background:var(--nv)">
         <div class="container">
             <div class="sh c">
                 <div class="accent-bar"></div>
-                <p class="label"><span data-lang="en">CMKS T20 League 2026</span><span data-lang="cs">CMKS T20 liga 2026</span></p>
+                <p class="label">
+                    <span data-lang="en" id="labelEn-fixtures"></span>
+                    <span data-lang="cs" id="labelCs-fixtures"></span>
+                </p>
                 <h2 class="heading-lg" data-lang="en">Season <span>Fixtures</span></h2>
                 <h2 class="heading-lg" data-lang="cs" style="display:none">Sezónní <span>zápasy</span></h2>
             </div>
-            <div class="fc anim">
-                <div class="fd">
-                    <div class="dy">03</div>
-                    <div class="mo">May</div>
-                </div>
-                <div class="fm">
-                    <span class="ft">Vinohrady Portos</span>
-                    <span class="fv">VS</span>
-                    <span class="ft hm">Saffron Strikers</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">11:00</div>
-                    <div>Scott Page Field</div>
-                    <span class="fb away">Away</span>
-                </div>
+
+            <!-- Season Year Tabs -->
+            <div class="tabs">
+                <button class="tb on" onclick="loadSeasonMatches('2026', this)">2026</button>
             </div>
-            <div class="fc anim d1">
-                <div class="fd">
-                    <div class="dy">14</div>
-                    <div class="mo">Jun</div>
-                </div><div class="fm">
-                    <span class="ft hm">Saffron Strikers</span>
-                    <span class="fv">VS</span>
-                    <span class="ft">Spartans Strikers</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">15:00</div>
-                    <div>Scott Page Field</div>
-                    <span class="fb home">Home</span>
-                </div>
-            </div>
-            <div class="fc anim d2">
-                <div class="fd">
-                    <div class="dy">11</div>
-                    <div class="mo">Jul</div>
-                </div>
-                <div class="fm">
-                    <span class="ft">UCC Wolves</span>
-                    <span class="fv">VS</span>
-                    <span class="ft hm">Saffron Strikers</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">09:00</div>
-                    <div>Banks Field</div>
-                    <span class="fb away">Away</span>
-                </div>
-            </div>
-            <div class="fc anim d3">
-                <div class="fd">
-                    <div class="dy">18</div>
-                    <div class="mo">Jul</div>
-                </div>
-                <div class="fm">
-                    <span class="ft">UCC Sharks</span>
-                    <span class="fv">VS</span>
-                    <span class="ft hm">Saffron Strikers</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">09:00</div>
-                    <div>Banks Field</div>
-                    <span class="fb away">Away</span>
-                </div>
-            </div>
-            <div class="fc anim d4">
-                <div class="fd">
-                    <div class="dy">19</div>
-                    <div class="mo">Jul</div>
-                </div>
-                <div class="fm">
-                    <span class="ft">Prague Barbarians Vikings</span>
-                    <span class="fv">VS</span>
-                    <span class="ft hm">Saffron Strikers</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">13:00</div>
-                    <div>Scott Page Field</div>
-                    <span class="fb away">Away</span>
-                </div>
-            </div>
-            <div class="fc anim d5">
-                <div class="fd">
-                    <div class="dy">26</div>
-                    <div class="mo">Jul</div>
-                </div><div class="fm">
-                    <span class="ft">KACR</span>
-                    <span class="fv">VS</span>
-                    <span class="ft hm">Saffron Strikers</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">17:00</div>
-                    <div>Scott Page Field</div>
-                    <span class="fb away">Away</span>
-                </div>
-            </div>
-            <div class="fc anim">
-                <div class="fd">
-                    <div class="dy">02</div>
-                    <div class="mo">Aug</div>
-                </div>
-                <div class="fm">
-                    <span class="ft hm">Saffron Strikers</span>
-                    <span class="fv">VS</span>
-                    <span class="ft">Brno Warriors</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">09:00</div>
-                    <div>Banks Field</div>
-                    <span class="fb home">Home</span>
-                </div>
-            </div>
-            <div class="fc anim d1">
-                <div class="fd">
-                    <div class="dy">08</div>
-                    <div class="mo">Aug</div>
-                </div><div class="fm">
-                    <span class="ft hm">Saffron Strikers</span>
-                    <span class="fv">VS</span>
-                    <span class="ft">Moravian Lightning</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">11:00</div>
-                    <div>Banks Field</div>
-                    <span class="fb home">Home</span>
-                </div>
-            </div>
-            <div class="fc anim d1">
-                <div class="fd">
-                    <div class="dy">22</div>
-                    <div class="mo">Aug</div>
-                </div>
-                <div class="fm">
-                    <span class="ft hm">Saffron Strikers</span>
-                    <span class="fv">VS</span>
-                    <span class="ft">Prague Barbarians Vikings</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">15:00</div>
-                    <div>Scott Page Field</div>
-                    <span class="fb" style="background:rgba(255,184,48,.15);color:var(--gd)">Semi-Final</span>
-                    <span class="fb home">Home</span>
-                </div>
-            </div>
-            <div class="fc anim d1">
-                <div class="fd">
-                    <div class="dy">29</div>
-                    <div class="mo">Aug</div>
-                </div>
-                <div class="fm">
-                    <span class="ft hm">Saffron Strikers</span>
-                    <span class="fv">VS</span>
-                    <span class="ft">UCC Wolves</span>
-                </div>
-                <div class="fmeta">
-                    <div class="time">15:00</div>
-                    <div>Scott Page Field</div>
-                    <span class="fb" style="background:rgba(255,184,48,.15);color:var(--gd)">Final</span>
-                    <span class="fb home">Home</span>
-                </div>
-            </div>
+
+            <!-- Dynamic Container -->
+            <div id="fixtures-container"></div>
         </div>
     </section>
+    
+    <!-- Scorecard Popup Modal -->  
+    <div id="scorecard-modal" class="sc-modal-overlay" style="display: none;">
+        <div class="sc-modal-box">
+            <div class="sc-modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                <h3 style="margin: 0; color: #ff9900;">Match Scorecard</h3>
+                <button class="sc-close-btn" onclick="closeScorecardModal()" style="background: none; border: none; color: #fff; font-size: 24px; cursor: pointer;">&times;</button>
+            </div>
+            <div id="scorecard-content" class="sc-modal-body"></div>
+        </div>
+    </div>
 
     <!-- TRAINING -->
     <section class="section" id="training" style="background:var(--nv2)">
@@ -342,7 +209,6 @@
                 <button class="tb" onclick="showM('jun',this)">Jun</button>
                 <button class="tb" onclick="showM('jul',this)">Jul</button>
                 <button class="tb" onclick="showM('aug',this)">Aug</button>
-                <button class="tb" onclick="showM('sep',this)">Sep</button>
             </div>
             <div class="tp on" id="p-apr">
                 <div class="tg">
@@ -383,15 +249,6 @@
                     <div class="tc"><div class="td"><div class="d">11</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
                     <div class="tc"><div class="td"><div class="d">18</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
                     <div class="tc"><div class="td"><div class="d">25</div><div class="m">Aug</div></div><div class="ti"><h4>17:00 LR + 18:00 Upper</h4><p>2 bays</p></div></div>
-                </div>
-            </div>
-            <div class="tp" id="p-sep">
-                <div class="tg">
-                    <div class="tc"><div class="td"><div class="d">01</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-                    <div class="tc"><div class="td"><div class="d">08</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-                    <div class="tc"><div class="td"><div class="d">15</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-                    <div class="tc"><div class="td"><div class="d">22</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
-                    <div class="tc"><div class="td"><div class="d">29</div><div class="m">Sep</div></div><div class="ti"><h4>17:00 — Upper Bay</h4><p>Nets</p></div></div>
                 </div>
             </div>
         </div>
@@ -470,7 +327,7 @@
             <!-- PLAYERS -->
             <div class="team-sub"><h3><span data-lang="en">Players</span><span data-lang="cs">Hráči</span></h3></div>
             <div class="team-grid">
-                <div class="pl anim">
+                <div class="pl anim" data-player-id="9598060" onclick="openPlayerStats('9598060')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/ParthB.jpg" alt="Parth Bhalodiya" class="player-photo">
                   </div>
@@ -479,7 +336,7 @@
                     <span class="pos">All Rounder · Captain</span>
                   </div>
                 </div>
-                <div class="pl anim d1">
+                <div class="pl anim d1" data-player-id="28347528" onclick="openPlayerStats('28347528')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/HardipM.jpg" alt="Hardipsinh Medhat" class="player-photo">
                   </div>
@@ -488,7 +345,7 @@
                     <span class="pos">Batsman · WK</span>
                   </div>
                 </div>
-                <div class="pl anim d2">
+                <div class="pl anim d2" data-player-id="23876172" onclick="openPlayerStats('23876172')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/VivekP.jpg" alt="Vivek Parekh" class="player-photo">
                   </div>
@@ -497,7 +354,7 @@
                     <span class="pos">Batting All Rounder</span>
                   </div>
                 </div>  
-                <div class="pl anim d3">
+                <div class="pl anim d3" data-player-id="48389284" onclick="openPlayerStats('48389284')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/AakashP.jpg" alt="Aakash Parmar" class="player-photo">
                   </div>
@@ -506,7 +363,7 @@
                     <span class="pos">All Rounder · Vice Captain</span>
                   </div>
                 </div> 
-                <div class="pl anim d4">
+                <div class="pl anim d4" data-player-id="32853689" onclick="openPlayerStats('32853689')" style="cursor: pointer;">
                   <div class="pl-top">
                     <!-- <img src="" alt="Harsh Jadawala" class="player-photo"> -->
                       <div class="photo-placeholder">👤</div>
@@ -516,7 +373,7 @@
                     <span class="pos">Bowling All Rounder</span>
                   </div>
                 </div>  
-                <div class="pl anim">
+                <div class="pl anim" data-player-id="38351868" onclick="openPlayerStats('38351868')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/DhrupalP.jpg" alt="Dhrupal Parekh" class="player-photo">
                   </div>
@@ -525,7 +382,7 @@
                     <span class="pos">Batsman</span>
                   </div>
                 </div>
-                <div class="pl anim d1">
+                <div class="pl anim d1" data-player-id="32193493" onclick="openPlayerStats('32193493')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/MaulikS.png" alt="Maulik Senjaliya" class="player-photo">
                   </div>
@@ -534,7 +391,7 @@
                     <span class="pos">Batsman</span>
                   </div>
                 </div>            
-				<div class="pl anim d2">
+				<div class="pl anim d2" data-player-id="32812927" onclick="openPlayerStats('32812927')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/PriteshS.jpg" alt="Pritesh Sarvaiya" class="player-photo">
                   </div>
@@ -543,7 +400,7 @@
                     <span class="pos">Bowler</span>
                   </div>
                 </div>
-                <div class="pl anim d3">
+                <div class="pl anim d3" data-player-id="22489412" onclick="openPlayerStats('22489412')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/NeelP.jpg" alt="Neel Pandya" class="player-photo">
                   </div>
@@ -552,7 +409,7 @@
                     <span class="pos">Batting All Rounder</span>
                   </div>
                 </div>
-                <div class="pl anim d4">
+                <div class="pl anim d4" data-player-id="8723765" onclick="openPlayerStats('8723765')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/JadeepP.jpg" alt="Jadeep Patel" class="player-photo">
                   </div>
@@ -561,7 +418,7 @@
                     <span class="pos">Batsman</span>
                   </div>
                 </div>  
-				<div class="pl anim">
+				<div class="pl anim" data-player-id="21190737" onclick="openPlayerStats('21190737')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/YashP.jpg" alt="Yash Patel" class="player-photo">
                   </div>
@@ -570,7 +427,7 @@
                     <span class="pos">Bowling All Rounder</span>
                   </div>
                 </div>  
-                <div class="pl anim d1">
+                <div class="pl anim d1" data-player-id="8349951" onclick="openPlayerStats('8349951')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/SmitP.jpg" alt="Smit Patel" class="player-photo">
                   </div>
@@ -579,7 +436,7 @@
                     <span class="pos">Batting All Rounder</span>
                   </div>
                 </div> 
-                <div class="pl anim d2">
+                <div class="pl anim d2" data-player-id="21181612" onclick="openPlayerStats('21181612')" style="cursor: pointer;">
                   <div class="pl-top">
                     <img src="teamPhoto/DipanP.jpg" alt="Dipan Patel" class="player-photo">
                   </div>
@@ -588,7 +445,7 @@
                     <span class="pos">Bowling All Rounder</span>
                   </div>
                 </div>
-                <div class="pl anim d3">
+                <div class="pl anim d3" data-player-id="42281605" onclick="openPlayerStats('42281605')" style="cursor: pointer;">
                   <div class="pl-top">
                     <!-- <img src="" alt="Aditya Patel" class="player-photo"> -->
                       <div class="photo-placeholder">👤</div>
@@ -598,7 +455,7 @@
                     <span class="pos">Batsman</span>
                   </div>
                 </div> 
-                <div class="pl anim d4">
+                <div class="pl anim d4" data-player-id="7559148" onclick="openPlayerStats('7559148')" style="cursor: pointer;">
                   <div class="pl-top">
                     <div class="photo-placeholder">👤</div>
                   </div>
@@ -643,7 +500,7 @@
                     <span class="pos">Batsman</span>
                   </div>
                 </div>  
-                <div class="pl anim">
+                <div class="pl anim" data-player-id="22832221" onclick="openPlayerStats('22832221')" style="cursor: pointer;">
                   <div class="pl-top">
                     <div class="photo-placeholder">👤</div>
                   </div>
@@ -685,6 +542,23 @@
             </div>
         </div>
     </section>
+
+    <!-- Player Statistics Modal -->
+    <div id="player-modal" class="sc-modal-overlay" style="display: none;">
+        <div class="sc-modal-box">
+            <!-- Static Header Container -->
+            <div class="sc-modal-header" style="display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #111; padding: 16px 20px; z-index: 10; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <div>
+                    <h3 id="player-modal-name" style="margin: 0; color: #fff; font-family: 'Oswald', sans-serif; text-transform: uppercase;">Player Statistics</h3>
+                    <span id="player-modal-role" style="color: var(--sf, #e53e3e); font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;"></span>
+                </div>
+                <button class="sc-close-btn" onclick="closePlayerModal()" style="background: none; border: none; color: #fff; font-size: 28px; cursor: pointer; line-height: 1;">&times;</button>
+            </div>
+            
+            <!-- Scrollable Modal Body -->
+            <div id="player-modal-content" class="sc-modal-body" style="padding: 20px; overflow-y: auto; max-height: calc(80vh - 70px);"></div>
+        </div>
+    </div>
         
     <!-- GALLERY -->
     <section class="section" id="gallery" style="background:var(--nv2)">
@@ -702,7 +576,7 @@
                     <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
                     
                     <div class="slide active">
-                        <img src="SS_Champions.PNG" alt="Saffron Strikers Champions">
+                        <img src="teamPhoto/SS_Champions.PNG" alt="Saffron Strikers Champions">
                         <div class="caption">
                             <span data-lang="en">🏆 Challenger Cup Champions! 2025</span>
                             <span data-lang="cs" style="display:none">🏆 Šampioni! 2025</span>
@@ -725,15 +599,35 @@
                             <span data-lang="cs" style="display:none">🏆 Pohár nezávislosti! 2026</span>
                         </div>
                     </div>
+                    <div class="slide active">
+                        <img src="teamPhoto/BB2026.JPG" alt="Saffron Strikers Champions">
+                    </div>
+                    <div class="slide active">
+                        <img src="teamPhoto/Divison3win_2026_01.JPG" alt="Saffron Strikers Champions">
+                        <div class="caption">
+                            <span data-lang="en">🏆 Champion of Division 3! 2026</span>
+                            <span data-lang="cs" style="display:none">🏆 Šampion 3. divize 2026!</span>
+                        </div>
+                    </div>
+                    <div class="slide active">
+                        <img src="teamPhoto/Divison3win_2026_02.JPG" alt="Saffron Strikers Champions">
+                        <div class="caption">
+                            <span data-lang="en">🏆 Champion of Division 3! 2026</span>
+                            <span data-lang="cs" style="display:none">🏆 Šampion 3. divize 2026!</span>
+                        </div>
+                    </div>
                     <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
                 </div>
 
                 <!-- THUMBNAIL NAV BAR -->
                 <div class="thumbnail-bar">
-                    <img class="thumb active" src="SS_Champions.PNG" onclick="goToSlide(0)" alt="Thumb 1">
+                    <img class="thumb active" src="teamPhoto/SS_Champions.PNG" onclick="goToSlide(0)" alt="Thumb 1">
                     <img class="thumb active" src="teamPhoto/IndependenceCup2601.jpg" onclick="goToSlide(1)" alt="Thumb 2">
                     <img class="thumb active" src="teamPhoto/IndependenceCup2602.jpg" onclick="goToSlide(2)" alt="Thumb 3">
-                    <img class="thumb active" src="teamPhoto/IndependenceCup2603.jpg" onclick="goToSlide(3)" alt="Thumb 4">                    
+                    <img class="thumb active" src="teamPhoto/IndependenceCup2603.jpg" onclick="goToSlide(3)" alt="Thumb 4">   
+                    <img class="thumb active" src="teamPhoto/BB2026.JPG" onclick="goToSlide(5)" alt="Thumb 5"> 
+                    <img class="thumb active" src="teamPhoto/Divison3win_2026_01.JPG" onclick="goToSlide(6)" alt="Thumb 6"> 
+                    <img class="thumb active" src="teamPhoto/Divison3win_2026_02.jpg" onclick="goToSlide(7)" alt="Thumb 7">                 
                 </div>
             </div>
         </div>

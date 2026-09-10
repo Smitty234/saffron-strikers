@@ -46,7 +46,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .label {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: clamp(11px, 2.5vw, 13px);
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--sf);
@@ -56,7 +56,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .heading-lg {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-size: clamp(1.6rem, 5vw, 3.2rem);
     text-transform: uppercase;
     line-height: 1;
     letter-spacing: -.5px;
@@ -72,7 +72,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 }
 
 .sub {
-    font-size: 15px;
+    font-size: clamp(13px, 2vw, 15px);
     color: var(--g4);
     max-width: 500px;
     margin-top: 12px;
@@ -86,7 +86,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     padding: 14px 36px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 15px;
+    font-size: clamp(12px, 2.5vw, 15px);
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
@@ -122,6 +122,16 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .btn-dk {
     background: var(--nv);
     color: var(--wh);
+}
+
+.btn-nav { 
+    padding: 8px 18px; 
+    font-size: 11px; 
+}
+
+.btn-full { 
+    width: 100%; 
+    justify-content: center; 
 }
 
 @keyframes fadeUp {
@@ -189,7 +199,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .nav-brand-text {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: clamp(14px, 3vw, 18px);
     color: var(--wh);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -199,7 +209,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .nav-brand-text small {
     display: block;
     font-family: 'Rajdhani', sans-serif;
-    font-size: 10px;
+    font-size: 9px;
     letter-spacing: 3px;
     color: var(--sf);
     font-weight: 600;
@@ -215,7 +225,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .nav-menu a {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: rgba(255, 255, 255, .7);
@@ -234,22 +244,23 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 
 .lang-sw {
     display: flex;
-    background: rgba(255, 255, 255, .06);
-    border-radius: 4px;
-    overflow: hidden;
+    align-items: center;
+    overflow: hidden; 
+    border-radius: 6px; 
+    flex-shrink: 0; 
 }
 
 .lang-sw button {
-    padding: 6px 14px;
+    padding: 6px 12px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 1px;
     background: transparent;
     border: none;
     color: rgba(255, 255, 255, .5);
     cursor: pointer;
-    transition: all .3s;
+    white-space: nowrap;
 }
 
 .lang-sw button.on {
@@ -316,7 +327,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .hero-label {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: clamp(11px, 2.5vw, 14px);
     letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--sf);
@@ -336,7 +347,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .hero h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: clamp(3.5rem, 7vw, 6rem);
+    font-size: clamp(2.5rem, 8vw, 5.5rem);
     text-transform: uppercase;
     line-height: .9;
     letter-spacing: -2px;
@@ -351,7 +362,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .hero-tag {
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
-    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.3rem);
     color: var(--gd);
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -361,7 +372,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 }
 
 .hero-desc {
-    font-size: 15px;
+    font-size: clamp(13px, 2vw, 15px);
     color: rgba(255, 255, 255, .6);
     max-width: 460px;
     margin-bottom: 36px;
@@ -449,7 +460,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .ticker-item {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(11px, 2.5vw, 14px);
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--wh);
@@ -472,11 +483,11 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 }
 
 .section {
-    padding: 100px 0;
+    padding: 80px 0;
     position: relative;
 }
 
-.sh { margin-bottom: 50px; }
+.sh { margin-bottom: 40px; }
 .sh.c { text-align: center; }
 .sh.c .accent-bar { margin: 0 auto 16px; }
 
@@ -509,14 +520,14 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .about-card h3 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     text-transform: uppercase;
     color: var(--sf);
     margin-bottom: 16px;
 }
 
 .about-card p {
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     color: rgba(255, 255, 255, .65);
     line-height: 1.8;
 }
@@ -525,7 +536,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     position: absolute;
     bottom: -10px;
     right: 10px;
-    font-size: 5rem;
+    font-size: 4rem;
     opacity: .06;
 }
 
@@ -552,7 +563,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .af h4 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--wh);
@@ -560,20 +571,19 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 }
 
 .af p {
-    font-size: 12px;
+    font-size: clamp(10px, 1.8vw, 12px);
     color: var(--g4);
-    line-height: 1.5;
 }
 
 .fc {
     background: rgba(255, 255, 255, .03);
     border: 1px solid rgba(255, 255, 255, .06);
-    padding: 24px 28px;
+    padding: 20px 24px;
     margin-bottom: 12px;
     display: grid;
-    grid-template-columns: 100px 1fr 140px;
+    grid-template-columns: 90px 1fr 140px;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
     transition: all .3s;
     clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
 }
@@ -588,7 +598,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .fd .dy {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: clamp(1.3rem, 4vw, 2rem);
     color: var(--sf);
     line-height: 1;
 }
@@ -596,7 +606,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .fd .mo {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--g4);
@@ -605,14 +615,54 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .fm {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     flex-wrap: wrap;
 }
+
+.team-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.score {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(12px, 2.5vw, 14px);
+    color: var(--wh);
+    background: rgba(255, 255, 255, .08);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.score small {
+    font-size: 10px;
+    color: var(--g4);
+    font-family: 'Poppins', sans-serif;
+}
+
+.match-result-text {
+    width: 100%;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(11px, 2.2vw, 13px);
+    font-weight: 700;
+    color: var(--gd);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.badges {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.fb.playoff { background: rgba(255, 184, 48, .15); color: var(--gd); }
+.fb.win { background: var(--gn); color: #000; font-weight: 700; }
 
 .ft {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: clamp(13px, 2.8vw, 16px);
     text-transform: uppercase;
     color: var(--wh);
 }
@@ -622,7 +672,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .fv {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(10px, 2vw, 13px);
     color: var(--g4);
     background: rgba(255, 255, 255, .05);
     padding: 4px 12px;
@@ -631,23 +681,23 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 
 .fmeta {
     text-align: right;
-    font-size: 12px;
+    font-size: clamp(10px, 2vw, 12px);
     color: var(--g4);
 }
 
 .fmeta .time {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 16px;
+    font-size: clamp(12px, 2.5vw, 15px);
     color: var(--wh);
 }
 
 .fb {
     display: inline-block;
-    padding: 3px 10px;
+    padding: 3px 8px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 10px;
+    font-size: clamp(8px, 1.8vw, 10px);
     letter-spacing: 1.5px;
     text-transform: uppercase;
     clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 100%, 5px 100%);
@@ -675,10 +725,10 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .tb {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: clamp(11px, 2vw, 13px);
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 10px 24px;
+    padding: 8px 18px;
     background: rgba(255, 255, 255, .05);
     border: 1px solid rgba(255, 255, 255, .1);
     color: rgba(255, 255, 255, .5);
@@ -698,17 +748,17 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 
 .tg {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 16px;
 }
 
 .tc {
     background: rgba(255, 255, 255, .03);
     border: 1px solid rgba(255, 255, 255, .06);
-    padding: 20px 24px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
     transition: all .3s;
     clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
 }
@@ -721,13 +771,13 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .td {
     text-align: center;
     flex-shrink: 0;
-    width: 56px;
+    width: 50px;
 }
 
 .td .d {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     color: var(--sf);
     line-height: 1;
 }
@@ -735,7 +785,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .td .m {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--g4);
@@ -744,13 +794,13 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .ti h4 {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: clamp(11px, 2vw, 13px);
     text-transform: uppercase;
     color: var(--wh);
 }
 
 .ti p {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--g4);
 }
 
@@ -759,7 +809,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .team-sub h3 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
     text-transform: uppercase;
     color: var(--sf);
     margin-bottom: 16px;
@@ -777,9 +827,9 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 16px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .pl {
@@ -801,7 +851,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 
 .pl-top {
     width: 100%;
-    height: 300px;
+    height: 250px;
     background: #0a0e1a; 
     position: relative;
     overflow: hidden;
@@ -818,35 +868,32 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     display: block;
     margin: 0;
     padding: 0;
+    aspect-ratio: 3/4;
     transition: transform .4s ease;
-}
-
-.pl:hover .player-photo {
-    transform: scale(1.05);
 }
 
 .pl-top .num {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 3rem;
     color: rgba(232, 98, 28, .12);
 }
 
 .pl-top .photo-placeholder {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background: rgba(232, 98, 28, .1);
     border: 2px dashed rgba(232, 98, 28, .25);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, .2);
 }
 
 .pl-bot {
-    padding: 14px 16px;
+    padding: 12px;
     text-align: center;
     border-top: 2px solid rgba(232, 98, 28, .2);
 }
@@ -854,7 +901,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .pl-bot h4 {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: clamp(11px, 2.2vw, 13px);
     text-transform: uppercase;
     color: var(--wh);
     margin-bottom: 2px;
@@ -864,7 +911,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .pl-bot .pos {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 600;
-    font-size: 10px;
+    font-size: clamp(9px, 1.8vw, 10px);
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: var(--sf);
@@ -950,7 +997,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     border: 1px solid rgba(255, 255, 255, .2);
     color: var(--wh);
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
     transition: all .3s;
     clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
 }
@@ -1152,53 +1199,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 
 .fn a:hover { color: var(--sf); }
 
-@media(max-width: 1024px) {
-    .hero .container {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding-top: 120px;
-    }
-    .hero-label { justify-content: center; }
-    .hero-desc { margin: 0 auto 36px; }
-    .hero-actions { justify-content: center; }
-    .hero-vis { order: -1; }
-    .logo-wrap { width: 260px; height: 260px; }
-    .logo-wrap img { width: 180px; }
-    .about-grid, .jg, .cg { grid-template-columns: 1fr; }
-    .nav-menu { display: none; }
-    .burger { display: flex; }
-    .nav-menu.open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--nv);
-        padding: 20px;
-        border-bottom: 2px solid var(--sf);
-        gap: 8px;
-    }
-    .fc { grid-template-columns: 80px 1fr; gap: 16px; }
-    .fmeta { grid-column: 1/-1; text-align: left; }
-}
-
-@media(max-width: 640px) {
-    .af-grid { grid-template-columns: 1fr; }
-    .team-grid { grid-template-columns: repeat(2, 1fr); }
-    .gg { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
-    .gi:first-child { grid-column: span 2; }
-    .tg { grid-template-columns: 1fr; }
-    .footer .container { flex-direction: column; text-align: center; }
-    .fc { grid-template-columns: 1fr; }
-    .fd { text-align: left; }
-    .fm { flex-wrap: wrap; }
-    .pl-top {
-        height: 240px;
-    }
-}
-
-/* Gallery Container & Border Setup */
+/* GALLERY CONTAINER & SLIDESHOW */
 .gallery-container {
     max-width: 900px;
     margin: 0 auto;
@@ -1225,9 +1226,7 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     animation: fadeSlide 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.slide.active {
-    display: block;
-}
+.slide.active { display: block; }
 
 .slide img {
     width: 100%;
@@ -1248,10 +1247,9 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     font-weight: 600;
     text-align: center;
     letter-spacing: 1px;
-    font-size: 1.1rem;
+    font-size: clamp(11px, 2.5vw, 14px);
 }
 
-/* Nav Controls */
 .slide-btn {
     position: absolute;
     top: 50%;
@@ -1276,7 +1274,6 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
 .prev { left: 15px; }
 .next { right: 15px; }
 
-/* Thumbnail Row */
 .thumbnail-bar {
     display: flex;
     justify-content: center;
@@ -1307,7 +1304,377 @@ body.cs div[data-lang="en"], body.cs p[data-lang="en"], body.cs h1[data-lang="en
     to { opacity: 1; }
 }
 
-@media (max-width: 600px) {
-    .slideshow-frame { height: 320px; }
-    .thumb { width: 50px; height: 40px; }
+/* SCORECARD MODAL STYLES */
+#scorecard-modal.sc-modal-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(5, 7, 15, 0.88) !important;
+    backdrop-filter: blur(8px);
+    z-index: 999999 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.sc-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    max-height: calc(85vh - 60px);
+}
+
+.sc-modal-box {
+    position: relative !important;
+    background: var(--nv);
+    border: 2px solid var(--sf);
+    border-radius: 12px;
+    padding: 24px;
+    width: 100%;
+    max-width: 680px;
+    max-height: 85vh;
+    overflow-y: auto;
+    color: var(--wh);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(232, 98, 28, 0.3);
+}
+
+.sc-modal-box::-webkit-scrollbar { width: 6px; }
+.sc-modal-box::-webkit-scrollbar-track { background: var(--nv2); border-radius: 4px; }
+.sc-modal-box::-webkit-scrollbar-thumb { background: var(--sf); border-radius: 4px; }
+
+.sc-modal-box h3, .sc-modal-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    font-weight: 700;
+    color: var(--sf);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sc-close-btn, .close-modal {
+    background: transparent;
+    border: none;
+    color: var(--wh);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.sc-close-btn:hover, .close-modal:hover { color: var(--sf); }
+
+.sc-accordion { margin-bottom: 12px; }
+
+.sc-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 12px;
+}
+
+.sc-header {
+    width: 100%;
+    background: #0f1527;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #ffffff;
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sc-header:hover {
+    background: #141b30;
+    border-color: rgba(232, 98, 28, 0.4);
+}
+
+.sc-team-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.sc-score-summary {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.sc-arrow {
+    font-size: 0.75rem;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.sc-accordion.active .sc-arrow { transform: rotate(180deg); }
+
+.sc-body {
+    display: none;
+    padding: 12px 4px 4px 4px;
+}
+
+.sc-accordion.active .sc-body { display: block; }
+
+.sc-section-title {
+    color: var(--sf);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 12px 0 8px 0;
+}
+
+/* Horizontal scroll wrapper for scorecard tables */
+.sc-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 16px;
+}
+
+.sc-table {
+    width: 100%;
+    min-width: 420px;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.sc-table th, .sc-table td {
+    padding: 8px 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    vertical-align: middle;
+}
+
+.sc-table th {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--sf);
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.sc-player {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--wh);
+    line-height: 1.3;
+}
+
+.sc-out-desc {
+    font-size: 10px;
+    color: var(--g4);
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.sc-table td strong {
+    color: var(--sf);
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+}
+
+.sc-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 12px;
+    color: var(--wh);
+}
+
+.sc-summary-row span {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--sf);
+}
+
+.sc-summary-row small {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: var(--g4);
+    font-weight: 400;
+}
+
+.sc-total-row {
+    background: rgba(232, 98, 28, 0.1);
+    border-top: 1px solid var(--sf);
+    border-bottom: 1px solid var(--sf);
+    margin-bottom: 15px;
+}
+
+.sc-total-row strong {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: var(--wh);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media(max-width: 1024px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 110px;
+    }
+    .hero-label { justify-content: center; }
+    .hero-desc { margin: 0 auto 36px; }
+    .hero-actions { justify-content: center; }
+    .hero-vis { order: -1; }
+    .logo-wrap { width: 240px; height: 240px; }
+    .logo-wrap img { width: 160px; }
+    .about-grid, .jg, .cg { grid-template-columns: 1fr; }
+    
+    .nav-menu { display: none; }
+    .burger { display: flex; }
+    
+    .nav-menu.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--nv);
+        padding: 20px;
+        border-bottom: 2px solid var(--sf);
+        gap: 8px;
+        max-height: 80vh;
+        overflow-y: auto;
+    }    
+    .fc { grid-template-columns: 80px 1fr; gap: 16px; }
+    .fmeta { grid-column: 1/-1; text-align: left; margin-top: 6px; }
+    .pl-top {
+       height: 250px;
+    }
+}
+
+@media(max-width: 640px) {
+    .container { padding: 0 16px; }
+    .section { padding: 60px 0; }
+    .af-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .gg { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; }
+    .gi:first-child { grid-column: span 2; }
+    .tg { grid-template-columns: 1fr; }
+    .footer .container { flex-direction: column; text-align: center; }
+    
+    .fc { 
+        grid-template-columns: 1fr; 
+        gap: 12px; 
+        padding: 16px;
+    }
+    .fd { text-align: left; }
+    .fm { flex-wrap: wrap; }
+    
+    .pl-top {
+        height: 250px;
+    }
+    .pl-bot { padding: 10px; }
+    
+    .slideshow-frame { height: 280px; }
+    .thumb { width: 50px; height: 38px; }
+    .slide-btn { padding: 8px 12px; font-size: 1rem; }
+    
+    #scorecard-modal.sc-modal-overlay { padding: 8px; }
+    .sc-modal-box { padding: 16px 12px; }
+}
+
+@media(max-width: 480px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .pl-top { height: 150px; }
+    .pl-top .photo-placeholder { width: 50px; height: 50px; font-size: 1.2rem; }
+    .slideshow-frame { height: 220px; }
+    .thumbnail-bar { gap: 6px; padding: 10px 6px; }
+    .thumb { width: 40px; height: 30px; }
+    .pl-top {
+        height: 250px;
+    }
+}
+
+// Player Modal for Statistics
+#player-modal .sc-modal-box {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; /* Limits overall height */
+    display: flex;
+    flex-direction: column; /* Stacks header above body */
+    overflow: hidden; /* Prevents whole box from scrolling */
+    border-radius: 8px;
+    background-color: #111;
+    z-index: 1000000;
+}
+
+#player-modal-content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Modal Overlay Background */
+.sc-modal-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    z-index: 999999 !important; /* Higher than all page elements */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Window Container */
+.sc-modal-box {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000000 !important;
+}
+
+/* Force strict alignment for modal stats tables */
+.sc-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important; /* Forces columns to distribute evenly */
+}
+
+.sc-table th, 
+.sc-table td {
+    text-align: center !important; /* Ensures text in headers and body align vertically */
+    padding: 8px 4px !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+}
+
+/* Optional: Ensure table wrapper spans full width */
+.sc-table-wrapper {
+    width: 100% !important;
+    overflow-x: auto;
+    margin-bottom: 16px;
 }
